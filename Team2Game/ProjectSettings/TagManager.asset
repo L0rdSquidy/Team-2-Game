@@ -5,14 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - Person
+  - Target
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
+  - NPC
   - 
   - 
   - 
