@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Unity.Netcode;
-
+using UnityEngine.SceneManagement;
 public class MultiplayerManage : MonoBehaviour
 {
     NetworkManager netManage;
@@ -22,6 +22,9 @@ public class MultiplayerManage : MonoBehaviour
 
     public void SessionStart(bool host) 
     {
+
+        SceneManager.LoadScene(1);
+
         if (host) 
         {
             netManage.StartHost();
