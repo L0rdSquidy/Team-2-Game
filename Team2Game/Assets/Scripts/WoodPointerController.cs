@@ -8,7 +8,7 @@ public class WoodPointerController : MonoBehaviour
     [SerializeField] Transform pointB; // Reference to the ending point
     [SerializeField] RectTransform targetZone; // Reference to the target zone RectTransform
     [SerializeField] float moveSpeed;
-    [SerializeField] KeyCode customKey = KeyCode.None;
+    [SerializeField] KeyCode customKey;
 
     private float shakeAmount = 10f; // Distance of shake movement
     private int shakeCount = 4; // Number of shake movements
