@@ -149,8 +149,8 @@ Transform:
   m_GameObject: {fileID: 94156008}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.060043897, w: 0.99819577}
-  m_LocalPosition: {x: 1.7553, y: 0.92, z: 0}
-  m_LocalScale: {x: 1.3551061, y: 3.3064077, z: 1}
+  m_LocalPosition: {x: 1.7553, y: 0.9978, z: 0}
+  m_LocalScale: {x: 1.3551061, y: 3.156958, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1273445839}
@@ -761,7 +761,7 @@ GameObject:
   - component: {fileID: 490449184}
   - component: {fileID: 490449183}
   m_Layer: 6
-  m_Name: chef Temp
+  m_Name: Chef
   m_TagString: Person
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -787,6 +787,7 @@ MonoBehaviour:
     m_Bits: 64
   PlayerBool: 0
   MinigameInt: 1
+  MiniName: Chef
   NormalColor: {r: 1, g: 1, b: 1, a: 0}
   SelectedColor: {r: 1, g: 1, b: 1, a: 1}
   TargetColor: {r: 1, g: 1, b: 1, a: 0}
@@ -1139,6 +1140,7 @@ MonoBehaviour:
     m_Bits: 64
   PlayerBool: 0
   MinigameInt: 1
+  MiniName: WoodCutting
   NormalColor: {r: 1, g: 1, b: 1, a: 0}
   SelectedColor: {r: 1, g: 1, b: 1, a: 1}
   TargetColor: {r: 1, g: 1, b: 1, a: 0}
@@ -1689,7 +1691,7 @@ GameObject:
   - component: {fileID: 1223610765}
   - component: {fileID: 1223610766}
   m_Layer: 6
-  m_Name: mining
+  m_Name: Mining
   m_TagString: Person
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1843,7 +1845,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   PlayerBool: 0
-  MinigameInt: 1
+  MinigameInt: 2
+  MiniName: Mining
   NormalColor: {r: 1, g: 1, b: 1, a: 0}
   SelectedColor: {r: 1, g: 1, b: 1, a: 1}
   TargetColor: {r: 1, g: 1, b: 1, a: 0}
@@ -1923,7 +1926,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1421926842}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -1977,7 +1980,7 @@ Transform:
   m_GameObject: {fileID: 1421926842}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.12, y: -3.4, z: 0}
+  m_LocalPosition: {x: 7.56, y: -2.83, z: 0}
   m_LocalScale: {x: 0.3731, y: 0.3731, z: 0.3731}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1997,7 +2000,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedPerson: {fileID: 0}
   normalColor: {r: 1, g: 1, b: 1, a: 0}
-  SelectedColor: {r: 1, g: 0, b: 0, a: 0.26666668}
+  SelectedColor: {r: 1, g: 1, b: 1, a: 1}
   targetColor: {r: 0, g: 0, b: 0, a: 0}
   selectedRenderer: {fileID: 0}
   elepsedTime: 0
@@ -2090,8 +2093,8 @@ Transform:
   m_GameObject: {fileID: 1428396701}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.060043897, w: 0.99819577}
-  m_LocalPosition: {x: 2.12, y: 0.92, z: 0}
-  m_LocalScale: {x: 0.8544175, y: 3.3064077, z: 1}
+  m_LocalPosition: {x: 2.12, y: 0.9978, z: 0}
+  m_LocalScale: {x: 0.8544175, y: 3.156958, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1273445839}
@@ -3046,8 +3049,8 @@ Transform:
   m_GameObject: {fileID: 2041998451}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.20285606, w: 0.9792086}
-  m_LocalPosition: {x: 2.75, y: -4.0182, z: 0}
-  m_LocalScale: {x: 0.8544175, y: 2.9569204, z: 1}
+  m_LocalPosition: {x: 2.75, y: -3.8367, z: 0}
+  m_LocalScale: {x: 0.8544175, y: 3.3098135, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1273445839}

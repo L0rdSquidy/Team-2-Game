@@ -9,6 +9,7 @@ public class ToMinigame : MonoBehaviour
     [SerializeField] private LayerMask NpcCheck;
     [SerializeField] private bool PlayerBool;
     [SerializeField] private int MinigameInt;
+    [SerializeField] private string MiniName;
     [SerializeField] Color NormalColor = Color.white;
     [SerializeField] Color SelectedColor;
     [SerializeField] Color TargetColor;
@@ -42,9 +43,8 @@ public class ToMinigame : MonoBehaviour
         {
             Vector3 clickpos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(clickpos, Vector2.zero, Mathf.Infinity, NpcCheck);
-            if (hit.collider != null && PlayerBool)
+            if (hit.collider != null && PlayerBool && hit.collider.gameObject.name == MiniName)
             {
-                Debug.Log("AHHHHHH");
                 Debug.Log(hit.collider.gameObject.name);
                 SceneManager.LoadScene(MinigameInt);
             }

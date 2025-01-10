@@ -7,12 +7,14 @@ public class Baking : MonoBehaviour
 {
     [SerializeField] private Scrollbar ChanceBar;
     [SerializeField] private Scrollbar Arrow;
+    private EndMiniGame endMiniGame;
     private bool ClickedArrow;
     private float WaitTime = 1.5f;
 
     void Start()
     {
         ChanceBar.value = Random.Range(0f, 1f);
+        endMiniGame = GetComponent<EndMiniGame>();
     }
 
     // Update is called once per frame
@@ -29,6 +31,7 @@ public class Baking : MonoBehaviour
         {
             Debug.Log("burnt");
             ClickedArrow = true;
+            endMiniGame.Return();
         }
         
         if (Input.GetMouseButtonDown(0))
@@ -37,9 +40,11 @@ public class Baking : MonoBehaviour
             if (ChanceBar.value >= Arrow.value - 0.1 && ChanceBar.value <= Arrow.value + 0.1)
             {
                 Debug.Log("Bread");
+                endMiniGame.Return();
             }else
             {
                 Debug.Log("burnt");
+                endMiniGame.Return();
             }
         }
         
