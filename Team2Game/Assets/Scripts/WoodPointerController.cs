@@ -8,6 +8,7 @@ public class WoodPointerController : MonoBehaviour
     [SerializeField] Transform pointB; // Reference to the ending point
     [SerializeField] RectTransform targetZone; // Reference to the target zone RectTransform
     [SerializeField] float moveSpeed;
+    [SerializeField] KeyCode customKey = KeyCode.Space;
 
     private float shakeAmount = 10f; // Distance of shake movement
     private int shakeCount = 4; // Number of shake movements
@@ -52,11 +53,11 @@ public class WoodPointerController : MonoBehaviour
         // Check for input
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            StartCoroutine(HandleSpacePress());
+            StartCoroutine(HandleKeyPress());
         }
     }
 
-    IEnumerator HandleSpacePress()
+    IEnumerator HandleKeyPress()
     {
         isStopped = true;
         CheckSuccess();
