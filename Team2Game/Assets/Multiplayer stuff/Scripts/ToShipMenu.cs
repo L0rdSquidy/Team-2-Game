@@ -21,6 +21,8 @@ public class ToShipMenu : MonoBehaviour
     Resource shipInv;
     Resource playerInv;
 
+    bool dutch; //false = swedish
+
     private void Awake()
     {
         menu = transform.Find("Canvas").gameObject;
@@ -33,6 +35,15 @@ public class ToShipMenu : MonoBehaviour
         menu.SetActive(false);
         shipInv = GetComponent<Resource>();
         player = GameObject.FindWithTag("Player");
+
+        if (dutch) 
+        {
+            transform.position = new Vector3(0, 3, 0);
+        }
+        else 
+        {
+            transform.position = new Vector3(7, 3, 0);
+        }
     }
 
     void Update()
