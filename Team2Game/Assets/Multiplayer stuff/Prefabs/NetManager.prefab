@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6485640988146388582}
-  - component: {fileID: 633765404978374552}
   - component: {fileID: 9042290822594892975}
   - component: {fileID: 46946773491349628}
+  - component: {fileID: 1145214553916708982}
   m_Layer: 0
   m_Name: NetManager
   m_TagString: Untagged
@@ -34,18 +34,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &633765404978374552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8008527883244706805}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c666c5d982692a843a3988ce34dcd262, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &9042290822594892975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,3 +98,15 @@ MonoBehaviour:
     PacketDelayMS: 0
     PacketJitterMS: 0
     PacketDropRate: 0
+--- !u!114 &1145214553916708982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8008527883244706805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc5e8af95c07e024182d546c8045e88a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

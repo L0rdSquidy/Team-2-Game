@@ -21,10 +21,11 @@ public class ToShipMenu : MonoBehaviour
     Resource shipInv;
     Resource playerInv;
 
-    bool dutch; //false = swedish
+    int dutch;
 
     private void Awake()
     {
+        dutch = Random.Range(0, 1); //0 = swedish
         menu = transform.Find("Canvas").gameObject;
         shipTxt = menu.transform.Find("shipInvTxt").gameObject;
         playerTxt = menu.transform.Find("playerInvTxt").gameObject;   
@@ -36,7 +37,7 @@ public class ToShipMenu : MonoBehaviour
         shipInv = GetComponent<Resource>();
         player = GameObject.FindWithTag("Player");
 
-        if (dutch) 
+        if (dutch == 1) 
         {
             transform.position = new Vector3(0, 3, 0);
         }
