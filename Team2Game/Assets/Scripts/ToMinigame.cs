@@ -9,9 +9,20 @@ public class ToMinigame : MonoBehaviour
     [SerializeField] private LayerMask NpcCheck;
     [SerializeField] private bool PlayerBool;
     [SerializeField] private int MinigameInt;
+    [SerializeField] Color NormalColor = Color.white;
+    [SerializeField] Color SelectedColor;
+    [SerializeField] Color TargetColor;
+    private SpriteRenderer Enderer;
+
+    void Start() 
+    {
+        Enderer = GetComponent<SpriteRenderer>();
+        TargetColor = NormalColor;
+    }
 
      void Update()
     {
+        Enderer.color = Color.Lerp(Enderer.color, TargetColor, 5f * Time.deltaTime);
         if (Physics2D.CircleCast(transform.position, 1.5f, Vector2.zero, 5, PlayerCheck))
         {
             PlayerBool = true;
@@ -19,9 +30,12 @@ public class ToMinigame : MonoBehaviour
         {
             PlayerBool = false;
         }
-        if (Physics2D.CircleCast(transform.position, 1.1f, Vector2.zero, 5, NpcCheck) )
+        if (Physics2D.CircleCast(transform.position, 3f, Vector2.zero, 5, PlayerCheck))
         {
-            
+            TargetColor = SelectedColor;
+        }else
+        {
+            TargetColor = NormalColor;
         }
 
         if (Input.GetMouseButtonDown(0))
