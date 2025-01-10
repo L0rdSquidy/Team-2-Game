@@ -25,7 +25,7 @@ public class ToShipMenu : MonoBehaviour
 
     private void Awake()
     {
-        dutch = Random.Range(0, 1); //0 = swedish
+        dutch = Random.Range(0, 2); //0 = swedish
         menu = transform.Find("Canvas").gameObject;
         shipTxt = menu.transform.Find("shipInvTxt").gameObject;
         playerTxt = menu.transform.Find("playerInvTxt").gameObject;   
@@ -39,11 +39,11 @@ public class ToShipMenu : MonoBehaviour
 
         if (dutch == 1) 
         {
-            transform.position = new Vector3(0, 3, 0);
+            transform.position = new Vector3(-1, 2.3f, 0);
         }
-        else 
+        else if(dutch == 0) 
         {
-            transform.position = new Vector3(7, 3, 0);
+            transform.position = new Vector3(2, 2.82f, 0);
         }
     }
 
