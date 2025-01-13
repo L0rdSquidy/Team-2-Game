@@ -671,11 +671,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 9467de7f-486c-45ce-b050-18d6964f24eb
+  cloudProjectId: 68921ddb-8d1a-4760-919a-1be5a17768fc
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Team2Game 2024-11-13_13-07-09
-  organizationId: squidyo
+  projectName: 25
+  organizationId: unity_56862416f7496da94931
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
