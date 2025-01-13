@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/ClickToMove.unity
     guid: b254ac4de07fd0e42845fc361d99c823
   - enabled: 1
+    path: Assets/Multiplayer stuff/Scenes/MP2.unity
+    guid: 915d63eb2f60e3c48b3e298a46909449
+  - enabled: 0
     path: Assets/Multiplayer stuff/Scenes/MP.unity
     guid: f05ec3030a7d7cc498dbb8c78ac7cbb1
   - enabled: 0
