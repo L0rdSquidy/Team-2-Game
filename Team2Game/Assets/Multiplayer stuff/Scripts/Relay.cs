@@ -1,0 +1,75 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using Unity.Services.Core;
+using Unity.Services.Authentication;
+using System.Threading.Tasks;
+using Unity.Services.Relay;
+using Unity.Services.Relay.Models;
+using Unity.Netcode;
+using Unity.Netcode.Transports.UTP;
+using Unity.Networking.Transport.Relay;
+using TMPro;
+
+public class Relay : MonoBehaviour
+{
+    public TextMeshProUGUI joinCodeTxt;
+    private TMP_InputField joinCodeInput;
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
+    // Start is called before the first frame update
+    private async void Start()
+    {
+        await UnityServices.InitializeAsync();
+
+        await AuthenticationService.Instance.SignInAnonymouslyAsync();
+
+        joinCodeTxt = GameObject.Find("JoinCode").GetComponent<TextMeshProUGUI>();
+        joinCodeInput = GameObject.Find("JoinInput").GetComponent<TMP_InputField>();
+    }
+
+    public async void StartRelay() 
+    {
+        string joincode = await StartHost();
+        joinCodeTxt.text = joincode;
+    }
+
+    public async void JoinRelay() 
+    {
+        await StartClient(joinCodeInput.text);
+    }
+
+    private async Task<string> StartHost(int maxConnections = 2)//or 1? 
+    {
+        //try 
+        //{
+            Allocation allocation = await RelayService.Instance.CreateAllocationAsync(maxConnections);
+        //}
+        //catch    
+        //{
+          //  throw;
+        //}
+
+        NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(new RelayServerData(allocation, "dtls"));
+
+        string joinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
+
+        return NetworkManager.Singleton.StartHost() ? joinCode : null;
+    }
+
+    private async Task<bool> StartClient(string joinCode) 
+    {
+        JoinAllocation joinAllocation = await RelayService.Instance.JoinAllocationAsync(joinCode);
+
+        NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(new RelayServerData(joinAllocation, "dtls"));
+
+        return !string.IsNullOrEmpty(joinCode) && NetworkManager.Singleton.StartClient();
+    }
+
+
+
+}
