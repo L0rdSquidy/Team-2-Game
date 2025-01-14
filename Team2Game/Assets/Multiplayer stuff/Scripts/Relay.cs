@@ -13,7 +13,7 @@ using TMPro;
 
 public class Relay : MonoBehaviour
 {
-    public TextMeshProUGUI joinCodeTxt;
+    //public TextMeshProUGUI joinCodeTxt;
     private TMP_InputField joinCodeInput;
     string joincode;
 
@@ -29,18 +29,24 @@ public class Relay : MonoBehaviour
 
         await AuthenticationService.Instance.SignInAnonymouslyAsync();
 
-        joinCodeTxt = GameObject.Find("JoinCode").GetComponent<TextMeshProUGUI>();
+        //joinCodeTxt = GameObject.Find("JoinCode").GetComponent<TextMeshProUGUI>();
         joinCodeInput = GameObject.Find("JoinInput").GetComponent<TMP_InputField>();
     }
 
     public async void StartRelay() 
     {
         joincode = await StartHost();
-        joinCodeTxt.text = joincode;
+        //joinCodeTxt.text = joincode;
+        NetworkManager.Singleton.GetComponent<MultiplayerManage>().SessionStart(joincode);
     }
 
     public async void JoinRelay() 
     {
+        if(joinCodeInput.text == null) //joinCodeTxt?
+        {
+            return;
+        }
+
         await StartClient(joinCodeInput.text);
     }
 

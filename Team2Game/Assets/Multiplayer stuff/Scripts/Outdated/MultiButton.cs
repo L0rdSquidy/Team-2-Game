@@ -24,6 +24,6 @@ public class MultiButton : MonoBehaviour
 
     public void ButtonPressed() 
     {
-        NetManager.GetComponent<MultiplayerManage>().SessionStart();//hosting
+        //NetManager.GetComponent<MultiplayerManage>().SessionStart();//hosting
     }
 }

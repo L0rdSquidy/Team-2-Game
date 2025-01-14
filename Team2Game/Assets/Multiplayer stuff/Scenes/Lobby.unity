@@ -348,8 +348,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: NetManager
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1145214553916708982, guid: 4a53ade8b2b5e434dab6edc35c87d778, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

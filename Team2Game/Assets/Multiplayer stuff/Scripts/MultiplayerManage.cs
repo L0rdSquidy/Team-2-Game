@@ -34,11 +34,11 @@ public class MultiplayerManage : MonoBehaviour
         SessionStart();
     }*/
 
-    public void SessionStart() //
+    public void SessionStart(string jCode) //
     {
-        joinCode = GameObject.Find("RelayManager").GetComponent<Relay>().joinCodeTxt.text;
+        joinCode = jCode;
 
-        //SceneManager.LoadScene(1);
+        SceneManager.LoadScene(1);
 
         
 
