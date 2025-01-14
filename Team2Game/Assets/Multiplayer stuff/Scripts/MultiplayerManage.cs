@@ -16,28 +16,32 @@ public class MultiplayerManage : MonoBehaviour
     }
 
     // Start is called before the first frame update
-   /* void Start()
+    void Start()
     {
-        netManage = GetComponent<NetworkManager>();
+        //netManage = GetComponent<NetworkManager>();
+    }
+
+
+   /* public void StartHost() 
+    {
+        netManage.StartHost();
+        SessionStart();
+    }
+
+    public void StartJoin()
+    {
+        netManage.StartClient();
+        SessionStart();
     }*/
 
-
-
-    public void SessionStart() //bool host
+    public void SessionStart() //
     {
         joinCode = GameObject.Find("RelayManager").GetComponent<Relay>().joinCodeTxt.text;
 
-        SceneManager.LoadScene(1);
+        //SceneManager.LoadScene(1);
 
         
 
-        /*if (host) 
-        {
-            netManage.StartHost();
-        }
-        else 
-        {
-            netManage.StartClient();
-        }*/
+        
     }
 }

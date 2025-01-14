@@ -6,20 +6,20 @@ public class MultiButton : MonoBehaviour
 {
     GameObject NetManager;
 
-    //bool hosting;
+    bool hosting;
 
     // Start is called before the first frame update
     void Start()
     {
         NetManager = GameObject.Find("NetManager");
-        /*if(transform.name == "Host") 
+        if(transform.name == "Host") 
         {
             hosting = true;
         }
         else 
         {
             hosting = false;
-        }*/
+        }
     }
 
     public void ButtonPressed() 

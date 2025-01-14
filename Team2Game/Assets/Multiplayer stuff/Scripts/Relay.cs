@@ -15,6 +15,7 @@ public class Relay : MonoBehaviour
 {
     public TextMeshProUGUI joinCodeTxt;
     private TMP_InputField joinCodeInput;
+    string joincode;
 
     private void Awake()
     {
@@ -34,7 +35,7 @@ public class Relay : MonoBehaviour
 
     public async void StartRelay() 
     {
-        string joincode = await StartHost();
+        joincode = await StartHost();
         joinCodeTxt.text = joincode;
     }
 
@@ -43,7 +44,7 @@ public class Relay : MonoBehaviour
         await StartClient(joinCodeInput.text);
     }
 
-    private async Task<string> StartHost(int maxConnections = 2)//or 1? 
+    private async Task<string> StartHost(int maxConnections = 5)//or 1? 
     {
         //try 
         //{
