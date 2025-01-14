@@ -618,7 +618,7 @@ GameObject:
   - component: {fileID: 4474425212480661696}
   - component: {fileID: 6597951871081712051}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2567,7 +2567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2768066927
+  GlobalObjectIdHash: 1656622512
   InScenePlacedSourceGlobalObjectIdHash: 2768066927
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1

@@ -2762,6 +2762,8 @@ MonoBehaviour:
   toTarget: 0
   target: {fileID: 1421926842}
   targetrenderer: {fileID: 0}
+  tradeMenuEnabled: 0
+  MenuObj: {fileID: 0}
 --- !u!4 &1537109690
 Transform:
   m_ObjectHideFlags: 0

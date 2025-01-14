@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MultiButton : MonoBehaviour
 {
-    GameObject NetManager;
+    /*GameObject NetManager;
 
     bool hosting;
 
@@ -26,4 +26,6 @@ public class MultiButton : MonoBehaviour
     {
         //NetManager.GetComponent<MultiplayerManage>().SessionStart();//hosting
     }
+    
+     */
 }
