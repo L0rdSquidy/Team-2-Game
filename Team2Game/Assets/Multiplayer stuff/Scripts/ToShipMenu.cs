@@ -11,31 +11,22 @@ public class ToShipMenu : MonoBehaviour
     [SerializeField] private bool PlayerBool;
     //[SerializeField] private int MinigameInt;
 
-    GameObject menu;
-    GameObject shipTxt;
-    GameObject playerTxt;
-    GameObject player;
-    TextMeshProUGUI shipTxtComponent;
-    TextMeshProUGUI playerTxtComponent;
 
-    Resource shipInv;
-    Resource playerInv;
+
+    Resource inventoryScript;
 
     int dutch;
 
     private void Awake()
     {
         dutch = Random.Range(0, 2); //0 = swedish
-        menu = transform.Find("Canvas").gameObject;
-        shipTxt = menu.transform.Find("shipInvTxt").gameObject;
-        playerTxt = menu.transform.Find("playerInvTxt").gameObject;   
+        
     }
 
     private void Start()
     {
-        menu.SetActive(false);
-        shipInv = GetComponent<Resource>();
-        player = GameObject.FindWithTag("Player");
+        //menu.SetActive(false);
+        //player = GameObject.FindWithTag("Player");
 
         if (dutch == 1) 
         {
@@ -70,48 +61,8 @@ public class ToShipMenu : MonoBehaviour
             {
                 Debug.Log("AHHHHHH");
                 Debug.Log(hit.collider.gameObject.name);
-                menu.SetActive(true);
-                shipTxtComponent = shipTxt.GetComponent<TextMeshProUGUI>();
-                playerTxtComponent = playerTxt.GetComponent<TextMeshProUGUI>();
-                playerInv = player.GetComponent<Resource>();
-                MenuUpdate();
+                SceneManager.LoadScene("Trade");//menu.SetActive(true);
             }
         }
-
-        if (menu.activeSelf && !PlayerBool) 
-        {
-            menu.SetActive(false);            
-        }
-    }
-
-    public void TransferItem(int num, bool playerToShip)//playerToShip = true means player is giving to ship, false means they are taking from ship
-    {//num is for which resource
-        if (playerToShip) 
-        {
-            shipInv.resources[num] += 1;
-            playerInv.resources[num] -= 1;
-            MenuUpdate();
-        }
-        else if (!playerToShip) 
-        {
-            shipInv.resources[num] -= 1;
-            playerInv.resources[num] += 1;
-            MenuUpdate();
-        }
-    }
-
-    private void MenuUpdate() 
-    {
-        shipTxtComponent.text = "Wood: " + shipInv.resources[0] + "\n"
-        + "Wheat: " + shipInv.resources[1] + "\n"
-        + "Iron: " + shipInv.resources[2] + "\n"
-        + "Bread: " + shipInv.resources[3] + "\n"
-        + "Weapons: " + shipInv.resources[4] + "\n";
-
-        playerTxtComponent.text = "Wood: " + playerInv.resources[0] + "\n"
-        + "Wheat: " + playerInv.resources[1] + "\n"
-        + "Iron: " + playerInv.resources[2] + "\n"
-        + "Bread: " + playerInv.resources[3] + "\n"
-        + "Weapons: " + playerInv.resources[4] + "\n";
     }
 }

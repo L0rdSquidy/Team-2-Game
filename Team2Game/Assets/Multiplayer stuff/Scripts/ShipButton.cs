@@ -31,6 +31,6 @@ public class ShipButton : MonoBehaviour
     public void ButtonPressed() 
     {
         script = ship.GetComponent<ToShipMenu>();
-        script.TransferItem(itemNum, giveItem);
+        //script.TransferItem(itemNum, giveItem);
     }
 }
