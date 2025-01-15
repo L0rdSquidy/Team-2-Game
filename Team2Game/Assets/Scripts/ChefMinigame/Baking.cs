@@ -26,7 +26,7 @@ public class Baking : MonoBehaviour
         {
             if (Arrow.value != 0 &&  ChanceBar.value > 0 && !ClickedArrow)
         {
-            Arrow.value -= 0.01f / 2;
+            Arrow.value -= 0.01f / 4;
         } 
         if (Arrow.value <= 0 && !ClickedArrow)
         {
