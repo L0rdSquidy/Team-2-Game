@@ -1,18 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class UiPanals : MonoBehaviour
+public class UiPanals : MonoBehaviour, IPointerClickHandler
 {
-    // Start is called before the first frame update
+    [SerializeField] GameObject Panal;
     void Start()
     {
-        
+        if (Panal == null)
+        {
+            Panal.SetActive(true); 
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnPointerClick(PointerEventData eventData)
     {
-        
+        if (Panal != null)
+        {
+            Panal.SetActive(false); 
+        }
     }
 }
