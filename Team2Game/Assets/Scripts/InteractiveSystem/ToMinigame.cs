@@ -13,6 +13,7 @@ public class ToMinigame : MonoBehaviour
     [SerializeField] Color NormalColor = Color.white;
     [SerializeField] Color SelectedColor;
     [SerializeField] Color TargetColor;
+    [SerializeField] SaveLocation saveLocation;
     private SpriteRenderer Enderer;
 
     void Start() 
@@ -45,6 +46,7 @@ public class ToMinigame : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(clickpos, Vector2.zero, Mathf.Infinity, NpcCheck);
             if (hit.collider != null && PlayerBool && hit.collider.gameObject.name == MiniName)
             {
+                saveLocation.Save();
                 Debug.Log(hit.collider.gameObject.name);
                 SceneManager.LoadScene(MinigameInt);
             }

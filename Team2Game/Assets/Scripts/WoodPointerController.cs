@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WoodPointerController : MonoBehaviour
 {
@@ -51,7 +52,7 @@ public class WoodPointerController : MonoBehaviour
         }
 
         // Check for input
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             StartCoroutine(HandleKeyPress());
         }
@@ -113,10 +114,12 @@ public class WoodPointerController : MonoBehaviour
         if (RectTransformUtility.RectangleContainsScreenPoint(targetZone, pointerTransform.position, null))
         {
             Debug.Log("success");
+            SceneManager.LoadScene(0);
         }
         else
         {
             Debug.Log("fail");
+            SceneManager.LoadScene(0);
         }
     }
 }

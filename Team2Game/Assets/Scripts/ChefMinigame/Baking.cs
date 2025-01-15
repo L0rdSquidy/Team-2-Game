@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Baking : MonoBehaviour
 {
@@ -25,13 +26,13 @@ public class Baking : MonoBehaviour
         {
             if (Arrow.value != 0 &&  ChanceBar.value > 0 && !ClickedArrow)
         {
-            Arrow.value -= 0.01f / 10;
+            Arrow.value -= 0.01f / 2;
         } 
         if (Arrow.value <= 0 && !ClickedArrow)
         {
             Debug.Log("burnt");
             ClickedArrow = true;
-            endMiniGame.Return();
+            SceneManager.LoadScene(1);
         }
         
         if (Input.GetMouseButtonDown(0))
@@ -40,11 +41,11 @@ public class Baking : MonoBehaviour
             if (ChanceBar.value >= Arrow.value - 0.1 && ChanceBar.value <= Arrow.value + 0.1)
             {
                 Debug.Log("Bread");
-                endMiniGame.Return();
+                SceneManager.LoadScene(1);
             }else
             {
                 Debug.Log("burnt");
-                endMiniGame.Return();
+                SceneManager.LoadScene(1);
             }
         }
         
