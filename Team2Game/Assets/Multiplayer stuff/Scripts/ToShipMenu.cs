@@ -15,7 +15,6 @@ public class ToShipMenu : MonoBehaviour
     GameObject shipTxt;
     GameObject playerTxt;
     GameObject player;
-    GameObject mouseTracker;
     TextMeshProUGUI shipTxtComponent;
     TextMeshProUGUI playerTxtComponent;
 
@@ -29,13 +28,11 @@ public class ToShipMenu : MonoBehaviour
         dutch = Random.Range(0, 2); //0 = swedish
         menu = transform.Find("Canvas").gameObject;
         shipTxt = menu.transform.Find("shipInvTxt").gameObject;
-        playerTxt = menu.transform.Find("playerInvTxt").gameObject;
-        mouseTracker = GameObject.Find("MouseTracker");
+        playerTxt = menu.transform.Find("playerInvTxt").gameObject;   
     }
 
     private void Start()
     {
-        mouseTracker.GetComponent<createTarget>().MenuObj = menu.transform.Find("Background").gameObject;
         menu.SetActive(false);
         shipInv = GetComponent<Resource>();
         player = GameObject.FindWithTag("Player");
@@ -73,7 +70,7 @@ public class ToShipMenu : MonoBehaviour
             {
                 Debug.Log("AHHHHHH");
                 Debug.Log(hit.collider.gameObject.name);
-                MenuSwitch(true);
+                menu.SetActive(true);
                 shipTxtComponent = shipTxt.GetComponent<TextMeshProUGUI>();
                 playerTxtComponent = playerTxt.GetComponent<TextMeshProUGUI>();
                 playerInv = player.GetComponent<Resource>();
@@ -83,14 +80,8 @@ public class ToShipMenu : MonoBehaviour
 
         if (menu.activeSelf && !PlayerBool) 
         {
-            MenuSwitch(false);
+            menu.SetActive(false);            
         }
-    }
-
-    void MenuSwitch(bool newState) 
-    {
-        menu.SetActive(newState);
-        mouseTracker.GetComponent<createTarget>().tradeMenuEnabled = newState;
     }
 
     public void TransferItem(int num, bool playerToShip)//playerToShip = true means player is giving to ship, false means they are taking from ship
