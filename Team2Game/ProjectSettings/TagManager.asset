@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Person
   - Target
+  - Soil
+  - Planted
+  - Grown
   layers:
   - Default
   - TransparentFX
