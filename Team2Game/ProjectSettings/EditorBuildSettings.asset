@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Multiplayer stuff/Scenes/Trade.unity
     guid: c0e1b0a1f65c7394ebc5e4638a7d808c
+  - enabled: 1
+    path: Assets/Multiplayer stuff/Scenes/Defeat.unity
+    guid: d342c955348818e4389fda24c377c993
   m_configObjects: {}

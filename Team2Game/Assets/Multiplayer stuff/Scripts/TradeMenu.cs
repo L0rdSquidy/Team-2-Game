@@ -41,29 +41,29 @@ public class TradeMenu : MonoBehaviour
 
         if (isOwnShip && isDutch)//ship is dutch, player is dutch
         {
-            menu = GameObject.Find("Give");
-            transform.Find("Take").gameObject.SetActive(false);
+            menu = GameObject.Find("OwnShip");
+            GameObject.Find("OtherShip").gameObject.SetActive(false);
             shipInventory = Resource.Instance.amsShipInv;
             playerInventory = Resource.Instance.amsPlayerInv;
         }
         else if (isOwnShip && !isDutch)//ship is swedish, player is swedish
         {
-            menu = GameObject.Find("Give");
-            GameObject.Find("Take").gameObject.SetActive(false);
+            menu = GameObject.Find("OwnShip");
+            GameObject.Find("OtherShip").gameObject.SetActive(false);
             shipInventory = Resource.Instance.stockShipInv;
             playerInventory = Resource.Instance.stockPlayerInv;
         }
         else if(!isOwnShip && isDutch)//ship is swedish, player is dutch
         {
-            menu = GameObject.Find("Take");
-            GameObject.Find("Give").gameObject.SetActive(false);
+            menu = GameObject.Find("OtherShip");
+            GameObject.Find("OwnShip").gameObject.SetActive(false);
             shipInventory = Resource.Instance.stockShipInv;
             playerInventory = Resource.Instance.amsPlayerInv;
         }
         else if(!isOwnShip && !isDutch)//ship is dutch, player is swedish
         {
-            menu = GameObject.Find("Take");
-            GameObject.Find("Give").gameObject.SetActive(false);
+            menu = GameObject.Find("OtherShip");
+            GameObject.Find("OwnShip").gameObject.SetActive(false);
             shipInventory = Resource.Instance.amsShipInv;
             playerInventory = Resource.Instance.stockPlayerInv;
         }
@@ -95,18 +95,20 @@ public class TradeMenu : MonoBehaviour
      //shipInv is for which inventory (own ship or other players ship)
      // playerInv is for player inv
 
-        if (playerToShip)
+        Debug.Log("transfer");
+        if (playerToShip && playerInventory[num] > 0)
         {
             shipInventory[num] += 1;
             playerInventory[num] -= 1;
             MenuUpdate();
         }
-        else
+        else if(!playerToShip && shipInventory[num] > 0)
         {
             shipInventory[num] -= 1;
             playerInventory[num] += 1;
             MenuUpdate();
         }
+        Debug.Log("done");
     }
 
     private void MenuUpdate()
@@ -122,6 +124,7 @@ public class TradeMenu : MonoBehaviour
         + "Iron: " + playerInventory[2] + "\n"
         + "Bread: " + playerInventory[3] + "\n"
         + "Weapons: " + playerInventory[4] + "\n";
+        Debug.Log("menu");
     }
 
     /*private void DisableMenu() 

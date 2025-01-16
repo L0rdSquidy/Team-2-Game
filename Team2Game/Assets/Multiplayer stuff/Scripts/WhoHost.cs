@@ -32,13 +32,23 @@ public class WhoHost : MonoBehaviour
 
     public void GameStart()
     {
-        if ((isHost && GameObject.Find("NationSlider").GetComponent<Slider>().value == 0)
-            || (!isHost && GameObject.Find("NationSlider").GetComponent<Slider>().value != 0))
+        float value = GameObject.Find("NationSlider").GetComponent<Slider>().value;
+
+        if (isHost && value == 0)
+        {
+            dutch = true;
+            Resource.Instance.isHostDutch = true;
+        }
+        else if (isHost && value != 0)
+        {
+            dutch = false;
+            Resource.Instance.isHostDutch = false;
+        }
+        else if (!isHost && !Resource.Instance.isHostDutch)
         {
             dutch = true;
         }
-        else if((isHost && GameObject.Find("NationSlider").GetComponent<Slider>().value != 0)
-            ||(!isHost && GameObject.Find("NationSlider").GetComponent<Slider>().value == 0))
+        else if(!isHost && Resource.Instance.isHostDutch)
         {
             dutch = false;
         }
@@ -53,6 +63,18 @@ public class WhoHost : MonoBehaviour
         else 
         {
             isOwnShip = false;
+        }
+    }
+
+    public void WonMinigame(int resourceNum, int amount)
+    {
+        if (dutch)
+        {
+            Resource.Instance.amsPlayerInv[resourceNum] += amount;
+        }
+        else 
+        {
+            Resource.Instance.stockPlayerInv[resourceNum] += amount;
         }
     }
 }

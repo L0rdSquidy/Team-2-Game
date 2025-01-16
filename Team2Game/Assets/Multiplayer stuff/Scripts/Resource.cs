@@ -15,7 +15,9 @@ public class Resource : MonoBehaviour
     public int[] stockShipInv = new int[5]; //stockholm
     //resources[0] for wood, [1] for wheat, [2] for iron, [3] for bread, [4] for weapons
 
+    public bool isHostDutch;
     
+
     private void Awake()
     {
         if (Instance != null)
@@ -26,6 +28,9 @@ public class Resource : MonoBehaviour
         
         Instance = this;
         DontDestroyOnLoad(gameObject);
+
+        amsPlayerInv[1] = 5;
+        stockPlayerInv[4] = 2;
     }
 
 

@@ -40,8 +40,5 @@ public class MultiplayerManage : MonoBehaviour
 
         SceneManager.LoadScene(1);
 
-        
-
-        
     }
 }

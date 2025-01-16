@@ -10,6 +10,7 @@ using Unity.Netcode;
 using Unity.Netcode.Transports.UTP;
 using Unity.Networking.Transport.Relay;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Relay : MonoBehaviour
 {
@@ -37,20 +38,23 @@ public class Relay : MonoBehaviour
     {
         joincode = await StartHost();
         //joinCodeTxt.text = joincode;
-        NetworkManager.Singleton.GetComponent<MultiplayerManage>().SessionStart(joincode);
+        
+        NetworkManager.Singleton.GetComponent<MultiplayerManage>().SessionStart(joincode);   
     }
 
     public async void JoinRelay() 
     {
-        if(joinCodeInput.text == null) //joinCodeTxt?
+        if(joinCodeInput.text == null) //joinCodeTxt?  || joinCodeInput.text != joincode
         {
             return;
         }
 
         await StartClient(joinCodeInput.text);
+        WhoHost.Instance.GameStart();
+        SceneManager.LoadScene(1);
     }
 
-    private async Task<string> StartHost(int maxConnections = 2)//or 1? 
+    private async Task<string> StartHost(int maxConnections = 1)//or 1? 
     {
         //try 
         //{
@@ -66,6 +70,8 @@ public class Relay : MonoBehaviour
         string joinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
 
         WhoHost.Instance.isHost = true;
+
+        WhoHost.Instance.GameStart();
 
         return NetworkManager.Singleton.StartHost() ? joinCode : null;
     }
