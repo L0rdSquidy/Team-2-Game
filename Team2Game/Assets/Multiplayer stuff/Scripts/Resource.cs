@@ -5,15 +5,16 @@ using UnityEngine;
 
 public class Resource : MonoBehaviour
 {
+    //this is the inventory and game manager. This script is shared between both players
+
     public static Resource Instance;
 
-    public int[] playerInv = new int[5];
-    public int[] ownShipInv = new int[5];
-    public int[] otherShipInv = new int[5];
+    public int[] amsPlayerInv = new int[5]; //amsterdam
+    public int[] amsShipInv = new int[5]; //amsterdam
+    public int[] stockPlayerInv = new int[5]; //stockholm
+    public int[] stockShipInv = new int[5]; //stockholm
     //resources[0] for wood, [1] for wheat, [2] for iron, [3] for bread, [4] for weapons
 
-    public bool isOwnShip;//is ship being interacted with the players own ship = true
-                //is the ship the other players ship = false
     
     private void Awake()
     {
@@ -26,6 +27,8 @@ public class Resource : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
+
+
 
     
     

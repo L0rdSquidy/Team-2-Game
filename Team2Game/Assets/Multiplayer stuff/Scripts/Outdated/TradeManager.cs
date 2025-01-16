@@ -11,8 +11,6 @@ public class TradeManager : MonoBehaviour
     {
         GameObject.Find("Give");
         GameObject.Find("Take");
-
-
     }
 
     // Start is called before the first frame update

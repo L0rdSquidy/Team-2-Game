@@ -19,8 +19,9 @@ public class TradeMenu : MonoBehaviour
     //Resource instance = Resource.Instance;
 
     bool isOwnShip;//is ship being interacted with the players own ship = true
-                  //is the ship the other players ship = false
+                   //is the ship the other players ship = false
 
+    bool isDutch; //false = swedish
 
     int[] playerInventory;
     int[] shipInventory;
@@ -29,20 +30,42 @@ public class TradeMenu : MonoBehaviour
     void Start()
     {
         //greyPanel = GameObject.Find("greyPanel");
-       // greyPanel.SetActive(false);
+        // greyPanl.SetActive(false);
 
-        playerInventory = Resource.Instance.playerInv;
-        if (Resource.Instance.isOwnShip) 
+        isOwnShip = WhoHost.Instance.isOwnShip;
+        isDutch = WhoHost.Instance.dutch;
+
+
+        //if ship and player are from same place: give to ship
+        //if ship and player are from different places: take from ship
+
+        if (isOwnShip && isDutch)//ship is dutch, player is dutch
         {
-            shipInventory = Resource.Instance.ownShipInv;
             menu = transform.Find("Give").gameObject;
             transform.Find("Take").gameObject.SetActive(false);
+            shipInventory = Resource.Instance.amsShipInv;
+            playerInventory = Resource.Instance.amsPlayerInv;
         }
-        else 
+        else if (isOwnShip && !isDutch)//ship is swedish, player is swedish
         {
-            shipInventory = Resource.Instance.otherShipInv;
+            menu = transform.Find("Give").gameObject;
+            transform.Find("Take").gameObject.SetActive(false);
+            shipInventory = Resource.Instance.stockShipInv;
+            playerInventory = Resource.Instance.stockPlayerInv;
+        }
+        else if(!isOwnShip && isDutch)//ship is swedish, player is dutch
+        {
             menu = transform.Find("Take").gameObject;
             transform.Find("Give").gameObject.SetActive(false);
+            shipInventory = Resource.Instance.stockShipInv;
+            playerInventory = Resource.Instance.amsPlayerInv;
+        }
+        else if(!isOwnShip && !isDutch)//ship is dutch, player is swedish
+        {
+            menu = transform.Find("Take").gameObject;
+            transform.Find("Give").gameObject.SetActive(false);
+            shipInventory = Resource.Instance.amsShipInv;
+            playerInventory = Resource.Instance.stockPlayerInv;
         }
 
         shipTxtComponent = menu.transform.Find("shipInvTxt").gameObject.GetComponent<TextMeshProUGUI>();
@@ -107,36 +130,46 @@ public class TradeMenu : MonoBehaviour
         AdjustInventories(true, true);
     }*/
 
-    private void AdjustInventories(bool adjustPlayerInv, bool adjustShipInv) 
+    private void AdjustInventories() //bool adjustPlayerInv, bool adjustShipInv
     {
-        if (adjustPlayerInv)
+
+        if (isOwnShip && isDutch)//ship is dutch, player is dutch
         {
-            for(int i = 0; i <= playerInventory.Length; i++)//foreach(int i in playerInventory) 
+            for (int i = 0; i <= playerInventory.Length - 1; i++)//foreach(int i in playerInventory) 
             {
-                Resource.Instance.playerInv[i] = playerInventory[i];
+                Resource.Instance.amsShipInv[i] = shipInventory[i];
+                Resource.Instance.amsPlayerInv[i] = playerInventory[i];
             }
         }
-
-        if (adjustShipInv && isOwnShip) 
+        else if (isOwnShip && !isDutch)//ship is swedish, player is swedish
         {
-            for (int i = 0; i <= shipInventory.Length; i++)
+            for (int i = 0; i <= playerInventory.Length - 1; i++)//foreach(int i in playerInventory) 
             {
-                Resource.Instance.ownShipInv[i] = shipInventory[i];
+                Resource.Instance.stockShipInv[i] = shipInventory[i];
+                Resource.Instance.stockPlayerInv[i] = playerInventory[i];
             }
-
         }
-        else if(adjustPlayerInv && !isOwnShip) 
+        else if (!isOwnShip && isDutch)//ship is swedish, player is dutch
         {
-            for (int i = 0; i <= shipInventory.Length; i++)
+            for (int i = 0; i <= playerInventory.Length - 1; i++)//foreach(int i in playerInventory) 
             {
-                Resource.Instance.otherShipInv[i] = shipInventory[i];
+                Resource.Instance.stockShipInv[i] = shipInventory[i];
+                Resource.Instance.amsPlayerInv[i] = playerInventory[i];
+            }
+        }
+        else if (!isOwnShip && !isDutch)//ship is dutch, player is swedish
+        {
+            for (int i = 0; i <= playerInventory.Length - 1; i++)//foreach(int i in playerInventory) 
+            {
+                Resource.Instance.amsShipInv[i] = shipInventory[i];
+                Resource.Instance.stockPlayerInv[i] = playerInventory[i];
             }
         }
     }
 
     private void TradeExit() 
     {
-        AdjustInventories(true, true);
+        AdjustInventories();
         SceneManager.LoadScene(1);
     }
 }

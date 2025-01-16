@@ -50,7 +50,7 @@ public class Relay : MonoBehaviour
         await StartClient(joinCodeInput.text);
     }
 
-    private async Task<string> StartHost(int maxConnections = 5)//or 1? 
+    private async Task<string> StartHost(int maxConnections = 2)//or 1? 
     {
         //try 
         //{
@@ -64,6 +64,8 @@ public class Relay : MonoBehaviour
         NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(new RelayServerData(allocation, "dtls"));
 
         string joinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
+
+        WhoHost.Instance.isHost = true;
 
         return NetworkManager.Singleton.StartHost() ? joinCode : null;
     }

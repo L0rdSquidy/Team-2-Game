@@ -5,8 +5,8 @@ using UnityEngine;
 public class ShipButton : MonoBehaviour
 {
     
-    GameObject ship;
-    ToShipMenu script;
+    //GameObject ship;
+    TradeMenu script;
 
     bool giveItem; //or send item (false)
     int itemNum;
@@ -14,7 +14,7 @@ public class ShipButton : MonoBehaviour
 
     private void Awake()
     {   buttonName = transform.name;
-        ship = transform.parent.parent.gameObject;
+        //ship = transform.parent.parent.gameObject;
         int.TryParse(buttonName.Substring(4), out itemNum);
         string nameNoNum = buttonName.Remove(buttonName.Length - 1);
         if (nameNoNum == "Give")
@@ -25,12 +25,17 @@ public class ShipButton : MonoBehaviour
         {
             giveItem = false;
         }
-
     }
-    
+
+    private void Start()
+    {
+        script = GameObject.Find("TradeManager").GetComponent<TradeMenu>();
+    }
+
     public void ButtonPressed() 
     {
-        script = ship.GetComponent<ToShipMenu>();
+        //script = ship.GetComponent<ToShipMenu>();
         //script.TransferItem(itemNum, giveItem);
+        script.TransferItem(itemNum, giveItem);
     }
 }

@@ -12,10 +12,7 @@ public class ToShipMenu : MonoBehaviour
     //[SerializeField] private int MinigameInt;
 
 
-
-    Resource inventoryScript;
-
-    int dutch;
+    int dutch; //fix setting positions
 
     private void Awake()
     {
