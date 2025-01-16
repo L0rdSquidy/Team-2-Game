@@ -41,29 +41,29 @@ public class TradeMenu : MonoBehaviour
 
         if (isOwnShip && isDutch)//ship is dutch, player is dutch
         {
-            menu = transform.Find("Give").gameObject;
+            menu = GameObject.Find("Give");
             transform.Find("Take").gameObject.SetActive(false);
             shipInventory = Resource.Instance.amsShipInv;
             playerInventory = Resource.Instance.amsPlayerInv;
         }
         else if (isOwnShip && !isDutch)//ship is swedish, player is swedish
         {
-            menu = transform.Find("Give").gameObject;
-            transform.Find("Take").gameObject.SetActive(false);
+            menu = GameObject.Find("Give");
+            GameObject.Find("Take").gameObject.SetActive(false);
             shipInventory = Resource.Instance.stockShipInv;
             playerInventory = Resource.Instance.stockPlayerInv;
         }
         else if(!isOwnShip && isDutch)//ship is swedish, player is dutch
         {
-            menu = transform.Find("Take").gameObject;
-            transform.Find("Give").gameObject.SetActive(false);
+            menu = GameObject.Find("Take");
+            GameObject.Find("Give").gameObject.SetActive(false);
             shipInventory = Resource.Instance.stockShipInv;
             playerInventory = Resource.Instance.amsPlayerInv;
         }
         else if(!isOwnShip && !isDutch)//ship is dutch, player is swedish
         {
-            menu = transform.Find("Take").gameObject;
-            transform.Find("Give").gameObject.SetActive(false);
+            menu = GameObject.Find("Take");
+            GameObject.Find("Give").gameObject.SetActive(false);
             shipInventory = Resource.Instance.amsShipInv;
             playerInventory = Resource.Instance.stockPlayerInv;
         }

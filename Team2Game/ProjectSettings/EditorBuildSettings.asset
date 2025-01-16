@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Minigame.unity
     guid: 23619968d424f7f48a97871ddd9bdc53
+  - enabled: 1
+    path: Assets/Multiplayer stuff/Scenes/Trade.unity
+    guid: c0e1b0a1f65c7394ebc5e4638a7d808c
   m_configObjects: {}
