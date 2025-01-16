@@ -10,6 +10,9 @@ public class WoodPointerController : MonoBehaviour
     [SerializeField] float moveSpeed;
     [SerializeField] KeyCode customKey;
 
+    public GameObject woodAnimation;
+    public GameObject woodStill;
+
     private float shakeAmount = 10f; // Distance of shake movement
     private int shakeCount = 4; // Number of shake movements
     private float shakeSpeed = 0.05f; // Speed of each shake movement
@@ -51,7 +54,7 @@ public class WoodPointerController : MonoBehaviour
         }
 
         // Check for input
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(customKey))
         {
             StartCoroutine(HandleKeyPress());
         }
@@ -70,7 +73,10 @@ public class WoodPointerController : MonoBehaviour
             yield return StartCoroutine(ShakePointer());
         }
 
-        yield return new WaitForSeconds(1f); // Wait for 1 second
+        if (isInsideTargetZone)
+        {
+            yield return StartCoroutine(ChoppingAnimation());
+        }
 
         if (Random.value > 0.5f)
         {
@@ -86,6 +92,20 @@ public class WoodPointerController : MonoBehaviour
         //pointerTransform.position = randomPosition;
 
         isStopped = false; // Resume movement
+    }
+
+    IEnumerator ChoppingAnimation()
+    {
+        yield return new WaitForSeconds(0.25f);
+
+        woodStill.SetActive(false);
+        woodAnimation.SetActive(true);
+
+        yield return new WaitForSeconds(1f);
+
+        woodStill.SetActive(true);
+        woodAnimation.SetActive(false);
+
     }
 
     IEnumerator ShakePointer()
@@ -105,6 +125,8 @@ public class WoodPointerController : MonoBehaviour
 
         // Return to original position
         pointerTransform.position = originalPosition;
+
+        yield return new WaitForSeconds(1f);
     }
 
     void CheckSuccess()
@@ -113,6 +135,7 @@ public class WoodPointerController : MonoBehaviour
         if (RectTransformUtility.RectangleContainsScreenPoint(targetZone, pointerTransform.position, null))
         {
             Debug.Log("success");
+            //[FOR FUTURE] inform GameManager of wood increase
         }
         else
         {
