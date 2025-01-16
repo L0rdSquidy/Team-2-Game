@@ -14,7 +14,7 @@ public class ToShipMenu : MonoBehaviour
 
     private void Start()
     {
-        bool isDutch = WhoHost.Instance.dutch;
+        /*bool isDutch = WhoHost.Instance.dutch;
 
         if (isDutch) 
         {
@@ -25,7 +25,7 @@ public class ToShipMenu : MonoBehaviour
         {
             transform.position = new Vector3(3.62f, 3.05f, 0);
             transform.name = "SwedishShip";
-        }
+        }*/
 
         //menu.SetActive(false);
         //player = GameObject.FindWithTag("Player");
@@ -54,6 +54,7 @@ public class ToShipMenu : MonoBehaviour
             {
                 Debug.Log("AHHHHHH");
                 Debug.Log(hit.collider.gameObject.name);
+                WhoHost.Instance.EnterTrade(name);
                 SceneManager.LoadScene("Trade");//menu.SetActive(true);
             }
         }

@@ -349,6 +349,10 @@ PrefabInstance:
       value: NetManager
       objectReference: {fileID: 0}
     - target: {fileID: 9042290822594892975, guid: 4a53ade8b2b5e434dab6edc35c87d778, type: 3}
+      propertyPath: NetworkConfig.PlayerPrefab
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9042290822594892975, guid: 4a53ade8b2b5e434dab6edc35c87d778, type: 3}
       propertyPath: NetworkConfig.EnableSceneManagement
       value: 0
       objectReference: {fileID: 0}
@@ -3379,7 +3383,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: LocalGameManager
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 398627365949678659, guid: 2af26fb84814df0418644dde619f26a9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

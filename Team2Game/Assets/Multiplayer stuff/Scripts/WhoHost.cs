@@ -43,4 +43,16 @@ public class WhoHost : MonoBehaviour
             dutch = false;
         }
     }
+
+    public void EnterTrade(string boatName) 
+    {
+        if((boatName == "DutchShip" && dutch) || (boatName == "SwedishShip" && !dutch)) 
+        {
+            isOwnShip = true;
+        }
+        else 
+        {
+            isOwnShip = false;
+        }
+    }
 }
