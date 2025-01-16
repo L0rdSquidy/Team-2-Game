@@ -12,27 +12,23 @@ public class ToShipMenu : MonoBehaviour
     //[SerializeField] private int MinigameInt;
 
 
-    int dutch; //fix setting positions
-
-    private void Awake()
-    {
-        dutch = Random.Range(0, 2); //0 = swedish
-        
-    }
-
     private void Start()
     {
+        bool isDutch = WhoHost.Instance.dutch;
+
+        if (isDutch) 
+        {
+            transform.position = new Vector3(-1.28f, 2.21f, 0);
+            transform.name = "DutchShip";
+        }
+        else if (!isDutch) 
+        {
+            transform.position = new Vector3(3.62f, 3.05f, 0);
+            transform.name = "SwedishShip";
+        }
+
         //menu.SetActive(false);
         //player = GameObject.FindWithTag("Player");
-
-        if (dutch == 1) 
-        {
-            transform.position = new Vector3(-1, 2.3f, 0);
-        }
-        else if(dutch == 0) 
-        {
-            transform.position = new Vector3(2, 2.82f, 0);
-        }
     }
 
     void Update()
