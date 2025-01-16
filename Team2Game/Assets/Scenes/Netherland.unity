@@ -1168,6 +1168,7 @@ GameObject:
   - component: {fileID: 337050919}
   - component: {fileID: 337050918}
   - component: {fileID: 337050917}
+  - component: {fileID: 337050923}
   m_Layer: 6
   m_Name: Chef
   m_TagString: Person
@@ -1209,13 +1210,14 @@ MonoBehaviour:
   NpcCheck:
     serializedVersion: 2
     m_Bits: 64
-  PlayerBool: 0
   MinigameInt: 2
   MiniName: Chef
   NormalColor: {r: 1, g: 1, b: 1, a: 0}
   SelectedColor: {r: 1, g: 1, b: 1, a: 1}
   TargetColor: {r: 1, g: 1, b: 1, a: 0}
   saveLocation: {fileID: 299050606}
+  HasRecourceReq: 1
+  ResourceReq: 3
 --- !u!50 &337050919
 Rigidbody2D:
   serializedVersion: 4
@@ -1345,6 +1347,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &337050923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337050916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09173326542ec104c85adadfebe4456c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Wheeeeeeeeet: 0
 --- !u!1 &372887975
 GameObject:
   m_ObjectHideFlags: 0
