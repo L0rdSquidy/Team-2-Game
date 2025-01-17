@@ -9,6 +9,11 @@ public class DoughKnead : MonoBehaviour
     [SerializeField] private float FailTime;
     [SerializeField] private GameObject BakingBar;
 
+    void Start()
+    {
+        Cursor.visible = true;
+    }
+
     void Update()
     {
         
