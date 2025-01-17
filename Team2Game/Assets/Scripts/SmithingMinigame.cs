@@ -17,13 +17,14 @@ public class SmithingMinigame : MonoBehaviour
     public int smithingScore = 0;   // Tracks score specific to the smithing minigame
     [SerializeField] int pressesPerPoint = 10; // Number of presses required for one point
 
+    [SerializeField] GameObject instructionsUI;
+    [SerializeField] GameObject noIronUI;
+
     void Start()
     {
         spriteTexture = swordImage.sprite.texture;
         StartCoroutine(SpawnDotsCoroutine()); // Start the coroutine to spawn dots one at a time
     }
-
-    //[FOR FUTURE] prevent from being played if player does not possess enough iron.
 
     IEnumerator SpawnDotsCoroutine()
     {
@@ -102,7 +103,7 @@ public class SmithingMinigame : MonoBehaviour
 
             Debug.Log("smithing minigame score: " + smithingScore);
 
-            // [FOR FUTURE] Notify global game-manager about score increase
+            // [IN FUTURE] Notify game-manager about increase in sword amount (smithingScore), subtract iron, enable/disable UI depending on amount of iron.
         }
     }
 
