@@ -63,7 +63,8 @@ public class FarmLand : MonoBehaviour
     List<GameObject> HarvestSoils = FarmPlaces.Where(obj => obj.CompareTag("Planted")).ToList();
     List<GameObject> WheetList = new List<GameObject>();
     List<GameObject> ToBeSoilList = new List<GameObject>();
-
+    fullGrown = false;
+    
     foreach (var soil in HarvestSoils)
     {
         if (soil.transform.childCount > 0) 
