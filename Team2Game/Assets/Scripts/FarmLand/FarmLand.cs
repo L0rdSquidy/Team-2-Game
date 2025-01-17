@@ -8,8 +8,10 @@ public class FarmLand : MonoBehaviour
 {
     public List<GameObject> FarmPlaces = new List<GameObject>();
     [SerializeField] private List<GameObject> Wheeeeet;
+    [SerializeField] private Animator Sickle;
     private bool fullGrown;
     public GameObject childPrefab; 
+    [SerializeField] private ResourceTemp wheee;
     public float pickInterval = 0.5f; 
 
     [SerializeField] private float timer;
@@ -60,6 +62,7 @@ public class FarmLand : MonoBehaviour
 
     public void WheeetHarvest()
 {
+    Sickle.Play("Harvest");
     List<GameObject> HarvestSoils = FarmPlaces.Where(obj => obj.CompareTag("Planted")).ToList();
     List<GameObject> WheetList = new List<GameObject>();
     List<GameObject> ToBeSoilList = new List<GameObject>();
@@ -78,8 +81,9 @@ public class FarmLand : MonoBehaviour
             }
         }
     }
-
+    
     Debug.Log("Weet harvested: " + WheetList.Count);
+    wheee.Wheeeeeeeeet += WheetList.Count;
 
     foreach (var wheet in WheetList)
     {
