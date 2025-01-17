@@ -22,6 +22,7 @@ public class SmithingMinigame : MonoBehaviour
 
     void Start()
     {
+        Cursor.visible = true;
         spriteTexture = swordImage.sprite.texture;
         StartCoroutine(SpawnDotsCoroutine()); // Start the coroutine to spawn dots one at a time
     }

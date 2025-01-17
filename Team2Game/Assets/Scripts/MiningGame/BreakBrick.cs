@@ -13,6 +13,7 @@ public class BreakBrick : MonoBehaviour
     [SerializeField] private List<Sprite> IronSprites;
     void Start()
     {
+        Cursor.visible = true;
         health = UnityEngine.Random.Range(1f, 10f);
         TotalHealth = health;
         precentageHealth = (health/TotalHealth) * 100;

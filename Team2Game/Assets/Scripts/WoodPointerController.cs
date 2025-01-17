@@ -23,6 +23,7 @@ public class WoodPointerController : MonoBehaviour
 
     void Start()
     {
+        Cursor.visible = true;
         pointerTransform = GetComponent<RectTransform>();
 
         if (Random.value > 0.5f)
