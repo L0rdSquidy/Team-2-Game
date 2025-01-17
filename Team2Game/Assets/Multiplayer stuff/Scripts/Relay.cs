@@ -18,6 +18,7 @@ public class Relay : MonoBehaviour
     private TMP_InputField joinCodeInput;
     string joincode;
 
+
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);

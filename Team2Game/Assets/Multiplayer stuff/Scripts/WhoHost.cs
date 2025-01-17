@@ -76,5 +76,7 @@ public class WhoHost : MonoBehaviour
         {
             Resource.Instance.stockPlayerInv[resourceNum] += amount;
         }
+
+        Resource.Instance.CallSync();
     }
 }

@@ -23,8 +23,8 @@ public class TradeMenu : MonoBehaviour
 
     bool isDutch; //false = swedish
 
-    int[] playerInventory;
-    int[] shipInventory;
+    List<int> playerInventory;
+    List<int> shipInventory;
 
     // Start is called before the first frame update
     void Start()
@@ -43,29 +43,49 @@ public class TradeMenu : MonoBehaviour
         {
             menu = GameObject.Find("OwnShip");
             GameObject.Find("OtherShip").gameObject.SetActive(false);
-            shipInventory = Resource.Instance.amsShipInv;
-            playerInventory = Resource.Instance.amsPlayerInv;
+            
+            for(int i = 0; i < Resource.Instance.amsShipInv.Count; i++) 
+            {
+                shipInventory[i] = Resource.Instance.amsShipInv[i];
+                playerInventory[i] = Resource.Instance.amsPlayerInv[i];
+            }
+            
         }
         else if (isOwnShip && !isDutch)//ship is swedish, player is swedish
         {
             menu = GameObject.Find("OwnShip");
             GameObject.Find("OtherShip").gameObject.SetActive(false);
-            shipInventory = Resource.Instance.stockShipInv;
-            playerInventory = Resource.Instance.stockPlayerInv;
+            for (int i = 0; i < Resource.Instance.amsShipInv.Count; i++)
+            {
+                shipInventory[i] = Resource.Instance.stockShipInv[i];
+                playerInventory[i] = Resource.Instance.stockPlayerInv[i];
+            }
+            //shipInventory = Resource.Instance.stockShipInv.Value;
+            //playerInventory = Resource.Instance.stockPlayerInv.Value;
         }
         else if(!isOwnShip && isDutch)//ship is swedish, player is dutch
         {
             menu = GameObject.Find("OtherShip");
             GameObject.Find("OwnShip").gameObject.SetActive(false);
-            shipInventory = Resource.Instance.stockShipInv;
-            playerInventory = Resource.Instance.amsPlayerInv;
+            for (int i = 0; i < Resource.Instance.amsShipInv.Count; i++)
+            {
+                shipInventory[i] = Resource.Instance.stockShipInv[i];
+                playerInventory[i] = Resource.Instance.amsPlayerInv[i];
+            }
+            //shipInventory = Resource.Instance.stockShipInv.Value;
+            //playerInventory = Resource.Instance.amsPlayerInv.Value;
         }
         else if(!isOwnShip && !isDutch)//ship is dutch, player is swedish
         {
             menu = GameObject.Find("OtherShip");
             GameObject.Find("OwnShip").gameObject.SetActive(false);
-            shipInventory = Resource.Instance.amsShipInv;
-            playerInventory = Resource.Instance.stockPlayerInv;
+            for (int i = 0; i < Resource.Instance.amsShipInv.Count; i++)
+            {
+                shipInventory[i] = Resource.Instance.amsShipInv[i];
+                playerInventory[i] = Resource.Instance.stockPlayerInv[i];
+            }
+            //shipInventory = Resource.Instance.amsShipInv.Value;
+           // playerInventory = Resource.Instance.stockPlayerInv.Value;
         }
 
         shipTxtComponent = menu.transform.Find("shipInvTxt").gameObject.GetComponent<TextMeshProUGUI>();
@@ -138,7 +158,7 @@ public class TradeMenu : MonoBehaviour
 
         if (isOwnShip && isDutch)//ship is dutch, player is dutch
         {
-            for (int i = 0; i <= playerInventory.Length - 1; i++)//foreach(int i in playerInventory) 
+            for (int i = 0; i <= Resource.Instance.amsPlayerInv.Count - 1; i++)//foreach(int i in playerInventory) 
             {
                 Resource.Instance.amsShipInv[i] = shipInventory[i];
                 Resource.Instance.amsPlayerInv[i] = playerInventory[i];
@@ -146,7 +166,7 @@ public class TradeMenu : MonoBehaviour
         }
         else if (isOwnShip && !isDutch)//ship is swedish, player is swedish
         {
-            for (int i = 0; i <= playerInventory.Length - 1; i++)//foreach(int i in playerInventory) 
+            for (int i = 0; i <= Resource.Instance.amsPlayerInv.Count- 1; i++)//foreach(int i in playerInventory) 
             {
                 Resource.Instance.stockShipInv[i] = shipInventory[i];
                 Resource.Instance.stockPlayerInv[i] = playerInventory[i];
@@ -154,7 +174,7 @@ public class TradeMenu : MonoBehaviour
         }
         else if (!isOwnShip && isDutch)//ship is swedish, player is dutch
         {
-            for (int i = 0; i <= playerInventory.Length - 1; i++)//foreach(int i in playerInventory) 
+            for (int i = 0; i <= Resource.Instance.amsPlayerInv.Count- 1; i++)//foreach(int i in playerInventory) 
             {
                 Resource.Instance.stockShipInv[i] = shipInventory[i];
                 Resource.Instance.amsPlayerInv[i] = playerInventory[i];
@@ -162,7 +182,7 @@ public class TradeMenu : MonoBehaviour
         }
         else if (!isOwnShip && !isDutch)//ship is dutch, player is swedish
         {
-            for (int i = 0; i <= playerInventory.Length - 1; i++)//foreach(int i in playerInventory) 
+            for (int i = 0; i <= Resource.Instance.amsPlayerInv.Count - 1; i++)//foreach(int i in playerInventory) 
             {
                 Resource.Instance.amsShipInv[i] = shipInventory[i];
                 Resource.Instance.stockPlayerInv[i] = playerInventory[i];
@@ -173,6 +193,7 @@ public class TradeMenu : MonoBehaviour
     private void TradeExit() 
     {
         AdjustInventories();
+        Resource.Instance.CallSync();
         SceneManager.LoadScene(1);
     }
 }

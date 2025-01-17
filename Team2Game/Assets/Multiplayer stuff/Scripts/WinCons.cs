@@ -9,7 +9,7 @@ public class WinCons : MonoBehaviour
     TextMeshProUGUI winTxt;
     TextMeshProUGUI timerTxt;
 
-    int[] lastPlayerInv;
+    List<int> lastPlayerInv;
     //int[] lastPlayerInv;
     //int[] lastAmsShipInv;
     //int[] lastStockShipInv;
@@ -43,15 +43,22 @@ public class WinCons : MonoBehaviour
 
     void CheckInventory() 
     {
-        int[] currentInv;
+        List<int> currentInv = new List<int>();
 
         if (dutch) 
         {
-            currentInv = Resource.Instance.amsPlayerInv;
+            for (int i = 0; i <= Resource.Instance.amsPlayerInv.Count - 1; i++)//foreach(int i in playerInventory) 
+            {
+                currentInv[i] = Resource.Instance.amsPlayerInv[i];
+            }
+            
         }
         else
         {
-            currentInv = Resource.Instance.stockPlayerInv;
+            for (int i = 0; i <= Resource.Instance.amsPlayerInv.Count - 1; i++)//foreach(int i in playerInventory) 
+            {
+                currentInv[i] = Resource.Instance.stockPlayerInv[i];
+            }
         }
 
         if (lastPlayerInv != currentInv)
@@ -61,7 +68,7 @@ public class WinCons : MonoBehaviour
         }
     }
 
-    void WriteInventories(int[] inv) 
+    void WriteInventories(List<int> inv) 
     {
         if (dutch) 
         {
