@@ -872,6 +872,7 @@ GameObject:
   m_Component:
   - component: {fileID: 299050605}
   - component: {fileID: 299050606}
+  - component: {fileID: 299050607}
   m_Layer: 0
   m_Name: Enviorment
   m_TagString: Untagged
@@ -918,6 +919,19 @@ MonoBehaviour:
   location: {fileID: 2304581788584732562, guid: 489d0878200dd41418311684ad567784, type: 3}
   Player: {fileID: 4504942572693226383}
   Target: {fileID: 1088585272}
+--- !u!114 &299050607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299050604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09173326542ec104c85adadfebe4456c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Wheeeeeeeeet: 0
 --- !u!1 &313369507
 GameObject:
   m_ObjectHideFlags: 0
@@ -1170,7 +1184,6 @@ GameObject:
   - component: {fileID: 337050919}
   - component: {fileID: 337050918}
   - component: {fileID: 337050917}
-  - component: {fileID: 337050923}
   m_Layer: 6
   m_Name: Chef
   m_TagString: Person
@@ -1221,6 +1234,7 @@ MonoBehaviour:
   HasRecourceReq: 1
   ResourceReq: 3
   SpeechBubble: {fileID: 1780590433}
+  Resource: {fileID: 299050607}
 --- !u!50 &337050919
 Rigidbody2D:
   serializedVersion: 4
@@ -1350,19 +1364,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &337050923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 337050916}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09173326542ec104c85adadfebe4456c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Wheeeeeeeeet: 0
 --- !u!1 &372887975
 GameObject:
   m_ObjectHideFlags: 0
@@ -3467,6 +3468,7 @@ MonoBehaviour:
   Wheeeeet: []
   Sickle: {fileID: 1250972145}
   childPrefab: {fileID: 6015156661169405893, guid: 6687aeb17f702784ba689ac772f32171, type: 3}
+  wheee: {fileID: 299050607}
   pickInterval: 0.5
   timer: 0
 --- !u!1 &1250972142
@@ -3914,15 +3916,16 @@ MonoBehaviour:
   NpcCheck:
     serializedVersion: 2
     m_Bits: 64
-  MinigameInt: 2
+  MinigameInt: 5
   MiniName: Smith
   NormalColor: {r: 1, g: 1, b: 1, a: 0}
   SelectedColor: {r: 1, g: 1, b: 1, a: 1}
   TargetColor: {r: 1, g: 1, b: 1, a: 0}
   saveLocation: {fileID: 299050606}
-  HasRecourceReq: 1
+  HasRecourceReq: 0
   ResourceReq: 2
-  SpeechBubble: {fileID: 1780590433}
+  SpeechBubble: {fileID: 1625290137}
+  Resource: {fileID: 299050607}
 --- !u!50 &1502613954
 Rigidbody2D:
   serializedVersion: 4
@@ -4026,7 +4029,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 27208450a845b9e42912f15716b2941a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7460afdf7d1009a49aa0568007e24315, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0

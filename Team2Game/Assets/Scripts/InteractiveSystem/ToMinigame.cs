@@ -18,7 +18,7 @@ public class ToMinigame : MonoBehaviour
     [SerializeField] private GameObject SpeechBubble;
     private int wheet;
     private SpriteRenderer Enderer;
-    
+    [SerializeField] ResourceTemp Resource;
     private bool PlayerBool;
 
     void Start() 
@@ -50,21 +50,21 @@ public class ToMinigame : MonoBehaviour
         {
             if (HasRecourceReq)
             {
-                wheet = GetComponent<ResourceTemp>().Wheeeeeeeeet;
-                    Vector3 clickpos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-                    RaycastHit2D hit = Physics2D.Raycast(clickpos, Vector2.zero, Mathf.Infinity, NpcCheck);
-                    if (hit.collider != null && PlayerBool && hit.collider.gameObject.name == MiniName)
+                Vector3 clickpos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+                RaycastHit2D hit = Physics2D.Raycast(clickpos, Vector2.zero, Mathf.Infinity, NpcCheck);
+                if (hit.collider != null && PlayerBool && hit.collider.gameObject.name == MiniName)
+                {
+                    if (ResourceReq <= Resource.Wheeeeeeeeet)
                     {
-                        if (ResourceReq <= wheet)
-                        {
-                            saveLocation.Save();
-                            Debug.Log(hit.collider.gameObject.name);
-                            SceneManager.LoadScene(MinigameInt);
-                        } else
-                        {
-                            SpeechBubble.SetActive(true);
-                        }
-                    } 
+                        Resource.Wheeeeeeeeet -= ResourceReq;
+                        saveLocation.Save();
+                        Debug.Log(hit.collider.gameObject.name);
+                        SceneManager.LoadScene(MinigameInt);
+                    } else
+                    {
+                        SpeechBubble.SetActive(true);
+                    }
+                } 
                 
             } else
             {

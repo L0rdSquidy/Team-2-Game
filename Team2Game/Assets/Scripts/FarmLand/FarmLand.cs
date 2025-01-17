@@ -11,6 +11,7 @@ public class FarmLand : MonoBehaviour
     [SerializeField] private Animator Sickle;
     private bool fullGrown;
     public GameObject childPrefab; 
+    [SerializeField] private ResourceTemp wheee;
     public float pickInterval = 0.5f; 
 
     [SerializeField] private float timer;
@@ -80,8 +81,9 @@ public class FarmLand : MonoBehaviour
             }
         }
     }
-
+    
     Debug.Log("Weet harvested: " + WheetList.Count);
+    wheee.Wheeeeeeeeet += WheetList.Count;
 
     foreach (var wheet in WheetList)
     {
