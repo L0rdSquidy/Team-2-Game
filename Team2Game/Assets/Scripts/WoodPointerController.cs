@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class WoodPointerController : MonoBehaviour
 {
@@ -10,6 +9,9 @@ public class WoodPointerController : MonoBehaviour
     [SerializeField] RectTransform targetZone; // Reference to the target zone RectTransform
     [SerializeField] float moveSpeed;
     [SerializeField] KeyCode customKey;
+
+    public GameObject woodAnimation;
+    public GameObject woodStill;
 
     private float shakeAmount = 10f; // Distance of shake movement
     private int shakeCount = 4; // Number of shake movements
@@ -52,7 +54,7 @@ public class WoodPointerController : MonoBehaviour
         }
 
         // Check for input
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(customKey))
         {
             StartCoroutine(HandleKeyPress());
         }
@@ -71,7 +73,10 @@ public class WoodPointerController : MonoBehaviour
             yield return StartCoroutine(ShakePointer());
         }
 
-        yield return new WaitForSeconds(1f); // Wait for 1 second
+        if (isInsideTargetZone)
+        {
+            yield return StartCoroutine(ChoppingAnimation());
+        }
 
         if (Random.value > 0.5f)
         {
@@ -87,6 +92,20 @@ public class WoodPointerController : MonoBehaviour
         //pointerTransform.position = randomPosition;
 
         isStopped = false; // Resume movement
+    }
+
+    IEnumerator ChoppingAnimation()
+    {
+        yield return new WaitForSeconds(0.25f);
+
+        woodStill.SetActive(false);
+        woodAnimation.SetActive(true);
+
+        yield return new WaitForSeconds(1f);
+
+        woodStill.SetActive(true);
+        woodAnimation.SetActive(false);
+
     }
 
     IEnumerator ShakePointer()
@@ -106,6 +125,8 @@ public class WoodPointerController : MonoBehaviour
 
         // Return to original position
         pointerTransform.position = originalPosition;
+
+        yield return new WaitForSeconds(1f);
     }
 
     void CheckSuccess()
@@ -114,12 +135,11 @@ public class WoodPointerController : MonoBehaviour
         if (RectTransformUtility.RectangleContainsScreenPoint(targetZone, pointerTransform.position, null))
         {
             Debug.Log("success");
-            SceneManager.LoadScene(0);
+            //[FOR FUTURE] inform GameManager of wood increase
         }
         else
         {
             Debug.Log("fail");
-            SceneManager.LoadScene(0);
         }
     }
 }
