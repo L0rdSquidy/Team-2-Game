@@ -1,56 +1,99 @@
 using System.Collections.Generic;
-using System.ComponentModel.Design;
 using UnityEngine;
 
 public class BreakBrick : MonoBehaviour
 {
     private float health;
-    private float TotalHealth;
-    private float precentageHealth;
-    private SpriteRenderer RockAndStone;
-    private SpriteRenderer Iron;
-    [SerializeField] private List<Sprite> RockSprites;
-    [SerializeField] private List<Sprite> IronSprites;
+    private float totalHealth;
+    private float percentageHealth;
+    private SpriteRenderer rockAndStone;
+    private SpriteRenderer iron;
+    [SerializeField] private List<Sprite> rockSprites;
+    [SerializeField] private List<Sprite> ironSprites;
+
+    private enum RockState
+    {
+        FullHealth,
+        HighHealth,
+        MediumHealth,
+        LowHealth,
+        CriticalHealth
+    }
+
+    private RockState currentRockState;
+
     void Start()
     {
         health = UnityEngine.Random.Range(1f, 10f);
-        TotalHealth = health;
-        precentageHealth = (health/TotalHealth) * 100;
-        RockAndStone = GetComponent<SpriteRenderer>();
-        Iron = GetComponent<SpriteRenderer>();
+        totalHealth = health;
+        percentageHealth = (health / totalHealth) * 100;
+        rockAndStone = GetComponent<SpriteRenderer>();
+        iron = GetComponent<SpriteRenderer>();
+
+        UpdateRockSprite();
     }
+
     private void OnMouseDown()
     {
-        if (precentageHealth > 80)
-        {
-            RockAndStone.sprite = RockSprites[0];
-        }
-        else if (precentageHealth > 60)
-        {
-            RockAndStone.sprite = RockSprites[1];
-        }
-        else if (precentageHealth > 40)
-        {
-            RockAndStone.sprite = RockSprites[2];
-        }
-        else if (precentageHealth > 20)
-        {
-            RockAndStone.sprite = RockSprites[3];
-        }
-        else
-        {
-            RockAndStone.sprite = RockSprites[4]; // Adjust if needed
-        }
-       
         health -= 1f;
         Debug.Log(health);
 
-        precentageHealth = (health/TotalHealth) * 100;
-       
+        percentageHealth = (health / totalHealth) * 100;
+
         if (health < 0)
         {
             //Destroy(gameObject);
-            Iron.sprite = IronSprites[0];
+            iron.sprite = ironSprites[0];
+        }
+        else
+        {
+            UpdateRockSprite();
+        }
+    }
+
+    private void UpdateRockSprite()
+    {
+        if (percentageHealth > 80)
+        {
+            currentRockState = RockState.FullHealth;
+        }
+        else if (percentageHealth > 60)
+        {
+            currentRockState = RockState.HighHealth;
+        }
+        else if (percentageHealth > 40)
+        {
+            currentRockState = RockState.MediumHealth;
+        }
+        else if (percentageHealth > 20)
+        {
+            currentRockState = RockState.LowHealth;
+        }
+        else
+        {
+            currentRockState = RockState.CriticalHealth;
+        }
+
+        switch (currentRockState)
+        {
+            case RockState.FullHealth:
+                rockAndStone.sprite = rockSprites[0];
+                break;
+            case RockState.HighHealth:
+                rockAndStone.sprite = rockSprites[1];
+                break;
+            case RockState.MediumHealth:
+                rockAndStone.sprite = rockSprites[2];
+                break;
+            case RockState.LowHealth:
+                rockAndStone.sprite = rockSprites[3];
+                break;
+            case RockState.CriticalHealth:
+                rockAndStone.sprite = rockSprites[4]; // Adjust if needed
+                break;
+            default:
+                rockAndStone.sprite = rockSprites[0];
+                break;
         }
     }
 }
