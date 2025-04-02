@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5e771b14690fc544187b393c8cae9fe7
+guid: 2d051ecf2bae5e842ab68b8ef9f173cb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,112 +108,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Bread_Spritesheet_0
-      rect:
-        serializedVersion: 2
-        x: 250
-        y: 985
-        width: 116
-        height: 59
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2dcdbf3e2194b50429b750773e2f27ef
-      internalID: 1953996193
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bread_Spritesheet_1
-      rect:
-        serializedVersion: 2
-        x: 889
-        y: 985
-        width: 130
-        height: 71
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fbef623602e66e8418df23bf880517c6
-      internalID: -1780273674
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bread_Spritesheet_2
-      rect:
-        serializedVersion: 2
-        x: 1536
-        y: 985
-        width: 134
-        height: 94
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ab4beabe950ba7b4b9b37fd38c9f6201
-      internalID: 1137586284
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bread_Spritesheet_3
-      rect:
-        serializedVersion: 2
-        x: 235
-        y: 337
-        width: 144
-        height: 102
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9abb7bbdfee9479479147895265d2d40
-      internalID: 1319359747
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bread_Spritesheet_4
-      rect:
-        serializedVersion: 2
-        x: 883
-        y: 337
-        width: 144
-        height: 103
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 856fc7da906edce48bb3b0febdedf4a2
-      internalID: -1441616742
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -224,12 +119,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Bread_Spritesheet_0: 1953996193
-      Bread_Spritesheet_1: -1780273674
-      Bread_Spritesheet_2: 1137586284
-      Bread_Spritesheet_3: 1319359747
-      Bread_Spritesheet_4: -1441616742
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
