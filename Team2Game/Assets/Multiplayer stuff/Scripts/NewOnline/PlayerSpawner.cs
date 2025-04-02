@@ -5,6 +5,8 @@ using Photon.Pun;
 
 public class PlayerSpawner : MonoBehaviour
 {
+    //obsolete
+
     GameObject mySpawnPoint;
 
     string spawnName; //name of the thing to spawn
