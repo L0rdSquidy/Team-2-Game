@@ -5,37 +5,25 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Multiplayer stuff/Scenes/TestScenes/StartScene.unity
-    guid: 4276bee716313014790e6b3ee0aa7f4e
-  - enabled: 0
-    path: Assets/Multiplayer stuff/Scenes/Lobby.unity
-    guid: da22f55d80b34d640914294f43308a68
-  - enabled: 0
-    path: Assets/Scenes/ClickToMove.unity
-    guid: b254ac4de07fd0e42845fc361d99c823
-  - enabled: 1
-    path: Assets/Multiplayer stuff/Scenes/MP2.unity
-    guid: 915d63eb2f60e3c48b3e298a46909449
-  - enabled: 0
-    path: Assets/Multiplayer stuff/Scenes/MP.unity
-    guid: f05ec3030a7d7cc498dbb8c78ac7cbb1
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
+    path: Assets/Scenes/Sweden.unity
+    guid: b254ac4de07fd0e42845fc361d99c823
+  - enabled: 1
+    path: Assets/Scenes/Netherland.unity
+    guid: a4d84939b06aef04bb3cca26f2ca989d
+  - enabled: 1
     path: Assets/Scenes/Minigame.unity
     guid: 23619968d424f7f48a97871ddd9bdc53
   - enabled: 1
-    path: Assets/Multiplayer stuff/Scenes/Trade.unity
-    guid: c0e1b0a1f65c7394ebc5e4638a7d808c
+    path: Assets/Scenes/MiningGame.unity
+    guid: 5f0e2a183dff7a54dbb7c445a25490b6
   - enabled: 1
-    path: Assets/Multiplayer stuff/Scenes/Defeat.unity
-    guid: d342c955348818e4389fda24c377c993
+    path: Assets/Scenes/WoodMiniGame.unity
+    guid: f8503bc99d99dd642a440f2f52d7aa71
   - enabled: 1
-    path: Assets/Multiplayer stuff/Scenes/TestScenes/Ams.unity
-    guid: 4a0b6c588ce46a54896d191386eb80cf
-  - enabled: 1
-    path: Assets/Multiplayer stuff/Scenes/TestScenes/Stock.unity
-    guid: 5173723dd3906344aa0c21deef32e305
+    path: Assets/Scenes/SmithingMinigame.unity
+    guid: 6b8e5056cad46194d881320e1e5fef21
   m_configObjects: {}
