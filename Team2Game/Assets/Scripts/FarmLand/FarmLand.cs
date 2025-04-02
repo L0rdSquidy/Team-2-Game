@@ -83,7 +83,7 @@ public class FarmLand : MonoBehaviour
     }
     
     Debug.Log("Weet harvested: " + WheetList.Count);
-    wheee.Wheeeeeeeeet += WheetList.Count;
+    ResourceManager.Instance.AddResource(ResourceManager.ResourceType.Wheat, WheetList.Count);
 
     foreach (var wheet in WheetList)
     {

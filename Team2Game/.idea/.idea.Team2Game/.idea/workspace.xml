@@ -6,11 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="ca0aa8a8-d15e-4eea-af5c-c6b03f8224bd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Team2Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Team2Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MiningGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MiningGame.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Player-Netherlands.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Player-Netherlands.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Netherland.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Netherland.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sweden.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sweden.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MiningGame/BreakBrick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MiningGame/BreakBrick.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WoodMinigame/WoodPointerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WoodMinigame/WoodPointerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ChefMinigame/Baking.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ChefMinigame/Baking.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FarmLand/FarmLand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FarmLand/FarmLand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InteractiveSystem/ToMinigame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InteractiveSystem/ToMinigame.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RecourseSystem/ResourceManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RecourseSystem/ResourceManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SmithingMinigame/SmithingMinigame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SmithingMinigame/SmithingMinigame.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +103,7 @@
       <updated>1743499106935</updated>
       <workItem from="1743499111244" duration="80000" />
       <workItem from="1743580140417" duration="2778000" />
-      <workItem from="1743591823708" duration="2498000" />
+      <workItem from="1743591823708" duration="4044000" />
     </task>
     <servers />
   </component>

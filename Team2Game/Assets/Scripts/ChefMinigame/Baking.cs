@@ -75,6 +75,7 @@ public class Baking : MonoBehaviour
 				if (ChanceBar.value >= Arrow.value - 0.1 && ChanceBar.value <= Arrow.value + 0.1)
 				{
 					Debug.Log("Bread");
+					ResourceManager.Instance.AddResource(ResourceManager.ResourceType.Bread, 1);
 					SwitchScene = true;
 				}else
 				{

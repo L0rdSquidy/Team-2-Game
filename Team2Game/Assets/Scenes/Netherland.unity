@@ -1235,7 +1235,7 @@ MonoBehaviour:
   HasRecourceReq: 1
   ResourceReq: 3
   SpeechBubble: {fileID: 1780590433}
-  Resource: {fileID: 299050607}
+  ischef: 1
 --- !u!50 &337050919
 Rigidbody2D:
   serializedVersion: 4
@@ -3926,7 +3926,7 @@ MonoBehaviour:
   HasRecourceReq: 0
   ResourceReq: 2
   SpeechBubble: {fileID: 1625290137}
-  Resource: {fileID: 299050607}
+  ischef: 0
 --- !u!50 &1502613954
 Rigidbody2D:
   serializedVersion: 4

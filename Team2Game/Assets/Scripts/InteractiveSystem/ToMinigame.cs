@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -16,9 +17,9 @@ public class ToMinigame : MonoBehaviour
     [SerializeField] private bool HasRecourceReq;
     [SerializeField] private int ResourceReq;
     [SerializeField] private GameObject SpeechBubble;
+    [SerializeField] private bool ischef;
     private int wheet;
     private SpriteRenderer Enderer;
-    [SerializeField] ResourceTemp Resource;
     private bool PlayerBool;
 
     void Start() 
@@ -50,13 +51,29 @@ public class ToMinigame : MonoBehaviour
         {
             if (HasRecourceReq)
             {
+                if (ischef)
+                {
+                    wheet = ResourceManager.Instance.GetResourceAmount(ResourceManager.ResourceType.Wheat);
+                }
+                else
+                {
+                    wheet = ResourceManager.Instance.GetResourceAmount(ResourceManager.ResourceType.Iron);
+                }
                 Vector3 clickpos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
                 RaycastHit2D hit = Physics2D.Raycast(clickpos, Vector2.zero, Mathf.Infinity, NpcCheck);
                 if (hit.collider != null && PlayerBool && hit.collider.gameObject.name == MiniName)
                 {
-                    if (ResourceReq <= Resource.Wheeeeeeeeet)
+                    if (ResourceReq <= wheet)
                     {
-                        Resource.Wheeeeeeeeet -= ResourceReq;
+                        if (ischef)
+                        {
+                            ResourceManager.Instance.RemoveResource(ResourceManager.ResourceType.Wheat, 3);
+                        }
+                        else
+                        {
+                            ResourceManager.Instance.RemoveResource(ResourceManager.ResourceType.Iron, 3);
+                        }
+                        
                         saveLocation.Save();
                         Debug.Log(hit.collider.gameObject.name);
                         SceneManager.LoadScene(MinigameInt);

@@ -31,7 +31,7 @@ public class ResourceManager : MonoBehaviour
     {
         foreach (ResourceType type in System.Enum.GetValues(typeof(ResourceType)))
         {
-            resources[type] = 0;
+            resources[type] = 3;
         }
     }
 

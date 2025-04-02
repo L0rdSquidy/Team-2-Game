@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SmithingMinigame : MonoBehaviour
@@ -101,6 +102,15 @@ public class SmithingMinigame : MonoBehaviour
         {
             buttonPressCount = 0; // Reset button press count
             smithingScore++;      // Increment smithing score
+            ResourceManager.Instance.AddResource(ResourceManager.ResourceType.Sword, 1);
+            if (ResourceManager.Instance.GetResourceAmount(ResourceManager.ResourceType.Iron) >= 2)
+            {
+                ResourceManager.Instance.RemoveResource(ResourceManager.ResourceType.Iron, 2);
+            }
+            else
+            {
+                SceneManager.LoadScene(1);
+            }
 
             Debug.Log("smithing minigame score: " + smithingScore);
 
