@@ -158,7 +158,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
         {
             //StartTimer(10);
 
-            view.RPC("StartGame", RpcTarget.All, 30);
+            view.RPC("StartGame", RpcTarget.All);
         }
         
         /*if (timerActive && playerAmount >= 2) 
@@ -175,9 +175,8 @@ public class RoomManager : MonoBehaviourPunCallbacks
 
 
     [PunRPC]
-    public void StartGame(int test)
+    public void StartGame()
     {
-        int test1 = test;
 
         if(PhotonNetwork.LocalPlayer.ActorNumber <= 1) 
         {
