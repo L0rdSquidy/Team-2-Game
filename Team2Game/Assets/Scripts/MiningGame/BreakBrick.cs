@@ -45,6 +45,8 @@ public class BreakBrick : MonoBehaviour
         {
             //Destroy(gameObject);
             iron.sprite = ironSprites[0];
+            ResourceManager.Instance.AddResource(ResourceManager.ResourceType.Iron, 1);
+            Debug.Log("Added Iron");
         }
         else
         {

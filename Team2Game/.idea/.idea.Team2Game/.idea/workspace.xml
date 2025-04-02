@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ca0aa8a8-d15e-4eea-af5c-c6b03f8224bd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Team2Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Team2Game/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MiningGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MiningGame.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Netherland.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Netherland.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sweden.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sweden.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MiningGame/BreakBrick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MiningGame/BreakBrick.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WoodMinigame/WoodPointerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WoodMinigame/WoodPointerController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,22 +20,31 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RecourseSystem/ResourceDisplay.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2v7bY51SOzN3ti2hSz9R6GXcGvo" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Developing",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Mining&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.44f1\Editor\Unity.exe" />
@@ -81,6 +98,8 @@
       <option name="presentableId" value="Default" />
       <updated>1743499106935</updated>
       <workItem from="1743499111244" duration="80000" />
+      <workItem from="1743580140417" duration="2778000" />
+      <workItem from="1743591823708" duration="2498000" />
     </task>
     <servers />
   </component>

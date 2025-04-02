@@ -135,7 +135,9 @@ public class WoodPointerController : MonoBehaviour
         // Check if the pointer is within the target zone
         if (RectTransformUtility.RectangleContainsScreenPoint(targetZone, pointerTransform.position, null))
         {
+            ResourceManager.Instance.AddResource(ResourceManager.ResourceType.Wood, 2);
             Debug.Log("success");
+            
             //[FOR FUTURE] inform GameManager of wood increase
         }
         else

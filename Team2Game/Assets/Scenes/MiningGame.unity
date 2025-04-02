@@ -227,6 +227,14 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: ironSprites.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
       propertyPath: IronSprites.Array.data[0]
       value: 
       objectReference: {fileID: 21300000, guid: 9127a0c9a490bae4ca9f2e8cb119e3fb, type: 3}
@@ -248,6 +256,30 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 51f6478a46c661b46810a6fbd308d4d8, type: 3}
     - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
       propertyPath: RockSprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9a579183bc4312640ba10be31a6b2bc1, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: ironSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9127a0c9a490bae4ca9f2e8cb119e3fb, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 3adcd33a43b739f42a0e6393746175ab, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 48f805d340f7a7243a86991a7754fcec, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 2c43f9e02d5eb7444a34d75e6d2fe0b4, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 51f6478a46c661b46810a6fbd308d4d8, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[4]
       value: 
       objectReference: {fileID: 21300000, guid: 9a579183bc4312640ba10be31a6b2bc1, type: 3}
     m_RemovedComponents: []
@@ -701,6 +733,14 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: ironSprites.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
       propertyPath: IronSprites.Array.data[0]
       value: 
       objectReference: {fileID: 21300000, guid: 9127a0c9a490bae4ca9f2e8cb119e3fb, type: 3}
@@ -722,6 +762,30 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 51f6478a46c661b46810a6fbd308d4d8, type: 3}
     - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
       propertyPath: RockSprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9a579183bc4312640ba10be31a6b2bc1, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: ironSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9127a0c9a490bae4ca9f2e8cb119e3fb, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 3adcd33a43b739f42a0e6393746175ab, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 48f805d340f7a7243a86991a7754fcec, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 2c43f9e02d5eb7444a34d75e6d2fe0b4, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 51f6478a46c661b46810a6fbd308d4d8, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[4]
       value: 
       objectReference: {fileID: 21300000, guid: 9a579183bc4312640ba10be31a6b2bc1, type: 3}
     m_RemovedComponents: []
@@ -864,6 +928,31 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1003012561227646644, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
   m_PrefabInstance: {fileID: 2085651367}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &514786572 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 562793781405311230, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+  m_PrefabInstance: {fileID: 2085651367}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &514786577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514786572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad901d7655ab661489e8c8f12bc9ecdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rockSprites:
+  - {fileID: 21300000, guid: 3adcd33a43b739f42a0e6393746175ab, type: 3}
+  - {fileID: 21300000, guid: 48f805d340f7a7243a86991a7754fcec, type: 3}
+  - {fileID: 21300000, guid: 2c43f9e02d5eb7444a34d75e6d2fe0b4, type: 3}
+  - {fileID: 21300000, guid: 51f6478a46c661b46810a6fbd308d4d8, type: 3}
+  - {fileID: 21300000, guid: 9a579183bc4312640ba10be31a6b2bc1, type: 3}
+  ironSprites:
+  - {fileID: 21300000, guid: 9127a0c9a490bae4ca9f2e8cb119e3fb, type: 3}
 --- !u!1001 &562970202
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -969,6 +1058,14 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: ironSprites.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
       propertyPath: IronSprites.Array.data[0]
       value: 
       objectReference: {fileID: 21300000, guid: 9127a0c9a490bae4ca9f2e8cb119e3fb, type: 3}
@@ -990,6 +1087,30 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 51f6478a46c661b46810a6fbd308d4d8, type: 3}
     - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
       propertyPath: RockSprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9a579183bc4312640ba10be31a6b2bc1, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: ironSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9127a0c9a490bae4ca9f2e8cb119e3fb, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 3adcd33a43b739f42a0e6393746175ab, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 48f805d340f7a7243a86991a7754fcec, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 2c43f9e02d5eb7444a34d75e6d2fe0b4, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 51f6478a46c661b46810a6fbd308d4d8, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[4]
       value: 
       objectReference: {fileID: 21300000, guid: 9a579183bc4312640ba10be31a6b2bc1, type: 3}
     m_RemovedComponents: []
@@ -1147,6 +1268,14 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: ironSprites.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
       propertyPath: IronSprites.Array.data[0]
       value: 
       objectReference: {fileID: 21300000, guid: 9127a0c9a490bae4ca9f2e8cb119e3fb, type: 3}
@@ -1168,6 +1297,30 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 51f6478a46c661b46810a6fbd308d4d8, type: 3}
     - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
       propertyPath: RockSprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9a579183bc4312640ba10be31a6b2bc1, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: ironSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9127a0c9a490bae4ca9f2e8cb119e3fb, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 3adcd33a43b739f42a0e6393746175ab, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 48f805d340f7a7243a86991a7754fcec, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 2c43f9e02d5eb7444a34d75e6d2fe0b4, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 51f6478a46c661b46810a6fbd308d4d8, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[4]
       value: 
       objectReference: {fileID: 21300000, guid: 9a579183bc4312640ba10be31a6b2bc1, type: 3}
     m_RemovedComponents: []
@@ -1661,6 +1814,14 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: ironSprites.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
       propertyPath: IronSprites.Array.data[0]
       value: 
       objectReference: {fileID: 21300000, guid: 9127a0c9a490bae4ca9f2e8cb119e3fb, type: 3}
@@ -1682,6 +1843,30 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 51f6478a46c661b46810a6fbd308d4d8, type: 3}
     - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
       propertyPath: RockSprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9a579183bc4312640ba10be31a6b2bc1, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: ironSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9127a0c9a490bae4ca9f2e8cb119e3fb, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 3adcd33a43b739f42a0e6393746175ab, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 48f805d340f7a7243a86991a7754fcec, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 2c43f9e02d5eb7444a34d75e6d2fe0b4, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 51f6478a46c661b46810a6fbd308d4d8, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[4]
       value: 
       objectReference: {fileID: 21300000, guid: 9a579183bc4312640ba10be31a6b2bc1, type: 3}
     m_RemovedComponents: []
@@ -2068,6 +2253,14 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: ironSprites.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
       propertyPath: IronSprites.Array.data[0]
       value: 
       objectReference: {fileID: 21300000, guid: 9127a0c9a490bae4ca9f2e8cb119e3fb, type: 3}
@@ -2089,6 +2282,30 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 51f6478a46c661b46810a6fbd308d4d8, type: 3}
     - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
       propertyPath: RockSprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9a579183bc4312640ba10be31a6b2bc1, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: ironSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9127a0c9a490bae4ca9f2e8cb119e3fb, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 3adcd33a43b739f42a0e6393746175ab, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 48f805d340f7a7243a86991a7754fcec, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 2c43f9e02d5eb7444a34d75e6d2fe0b4, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 51f6478a46c661b46810a6fbd308d4d8, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[4]
       value: 
       objectReference: {fileID: 21300000, guid: 9a579183bc4312640ba10be31a6b2bc1, type: 3}
     m_RemovedComponents: []
@@ -2248,10 +2465,14 @@ PrefabInstance:
       propertyPath: RockSprites.Array.data[4]
       value: 
       objectReference: {fileID: 21300000, guid: 9a579183bc4312640ba10be31a6b2bc1, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 562793781405311230, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 514786577}
   m_SourcePrefab: {fileID: 100100000, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
 --- !u!1001 &2113102711
 PrefabInstance:
@@ -2358,6 +2579,14 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: ironSprites.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
       propertyPath: IronSprites.Array.data[0]
       value: 
       objectReference: {fileID: 21300000, guid: 9127a0c9a490bae4ca9f2e8cb119e3fb, type: 3}
@@ -2379,6 +2608,30 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 51f6478a46c661b46810a6fbd308d4d8, type: 3}
     - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
       propertyPath: RockSprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9a579183bc4312640ba10be31a6b2bc1, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: ironSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9127a0c9a490bae4ca9f2e8cb119e3fb, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 3adcd33a43b739f42a0e6393746175ab, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 48f805d340f7a7243a86991a7754fcec, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 2c43f9e02d5eb7444a34d75e6d2fe0b4, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 51f6478a46c661b46810a6fbd308d4d8, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[4]
       value: 
       objectReference: {fileID: 21300000, guid: 9a579183bc4312640ba10be31a6b2bc1, type: 3}
     m_RemovedComponents: []
@@ -2487,6 +2740,14 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: ironSprites.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
       propertyPath: IronSprites.Array.data[0]
       value: 
       objectReference: {fileID: 21300000, guid: 9127a0c9a490bae4ca9f2e8cb119e3fb, type: 3}
@@ -2510,6 +2771,34 @@ PrefabInstance:
       propertyPath: RockSprites.Array.data[4]
       value: 
       objectReference: {fileID: 21300000, guid: 9a579183bc4312640ba10be31a6b2bc1, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: ironSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9127a0c9a490bae4ca9f2e8cb119e3fb, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 3adcd33a43b739f42a0e6393746175ab, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 48f805d340f7a7243a86991a7754fcec, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 2c43f9e02d5eb7444a34d75e6d2fe0b4, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 51f6478a46c661b46810a6fbd308d4d8, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9a579183bc4312640ba10be31a6b2bc1, type: 3}
+    - target: {fileID: 8723806995601502283, guid: e9c6b10c95973064bb290bf5563af375, type: 3}
+      propertyPath: rockSprites.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9127a0c9a490bae4ca9f2e8cb119e3fb, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
