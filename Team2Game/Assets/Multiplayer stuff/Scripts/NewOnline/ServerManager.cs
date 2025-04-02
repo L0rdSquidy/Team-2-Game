@@ -62,7 +62,7 @@ public class ServerManager : MonoBehaviourPunCallbacks
         //connectButton.SetActive(true);
 
         print($"Has connected to a server in {PhotonNetwork.CloudRegion}");
-        PhotonNetwork.AutomaticallySyncScene = true;
+        PhotonNetwork.AutomaticallySyncScene = false;
         GetComponent<LobbyManager>().JoinRoom();
         //Destroy(GameObject.Find("DestroyOnceConnected"));
         loadingTxt.SetActive(true);

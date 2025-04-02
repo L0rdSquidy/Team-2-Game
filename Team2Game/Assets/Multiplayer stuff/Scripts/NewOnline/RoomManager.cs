@@ -175,8 +175,10 @@ public class RoomManager : MonoBehaviourPunCallbacks
 
 
     [PunRPC]
-    public void StartGame()
+    public void StartGame(int test)
     {
+        int test1 = test;
+
         if(PhotonNetwork.LocalPlayer.ActorNumber <= 1) 
         {
             SceneManager.LoadScene(AmsSceneNum);
