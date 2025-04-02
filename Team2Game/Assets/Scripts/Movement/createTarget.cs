@@ -20,6 +20,7 @@ public class createTarget : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             targetrenderer.enabled = true;
+            Cursor.visible = false;
             toTarget = true;
             mousPos += new Vector3(0, 0, 10);
             target.transform.position = mousPos;
@@ -27,8 +28,9 @@ public class createTarget : MonoBehaviour
         if (toTarget)
         {
             timeelepsed += Time.deltaTime;
-            if (timeelepsed > 1)
+            if (timeelepsed > 0.5f)
             {
+                Cursor.visible = true;
                 toTarget = false;
                 timeelepsed = 0;
                 targetrenderer.enabled = false;

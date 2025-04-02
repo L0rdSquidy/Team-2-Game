@@ -7,17 +7,23 @@ public class ToMinigame : MonoBehaviour
 {
     [SerializeField] private LayerMask PlayerCheck;
     [SerializeField] private LayerMask NpcCheck;
-    [SerializeField] private bool PlayerBool;
     [SerializeField] private int MinigameInt;
     [SerializeField] private string MiniName;
-    [SerializeField] Color NormalColor = Color.white;
-    [SerializeField] Color SelectedColor;
-    [SerializeField] Color TargetColor;
-    [SerializeField] SaveLocation saveLocation;
+    [SerializeField] private Color NormalColor = Color.white;
+    [SerializeField] private Color SelectedColor;
+    [SerializeField] private Color TargetColor;
+    [SerializeField] private SaveLocation saveLocation;
+    [SerializeField] private bool HasRecourceReq;
+    [SerializeField] private int ResourceReq;
+    [SerializeField] private GameObject SpeechBubble;
+    private int wheet;
     private SpriteRenderer Enderer;
+    [SerializeField] ResourceTemp Resource;
+    private bool PlayerBool;
 
     void Start() 
     {
+        
         Enderer = GetComponent<SpriteRenderer>();
         TargetColor = NormalColor;
     }
@@ -42,17 +48,40 @@ public class ToMinigame : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            Vector3 clickpos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast(clickpos, Vector2.zero, Mathf.Infinity, NpcCheck);
-            if (hit.collider != null && PlayerBool && hit.collider.gameObject.name == MiniName)
+            if (HasRecourceReq)
             {
-                saveLocation.Save();
-                Debug.Log(hit.collider.gameObject.name);
-                SceneManager.LoadScene(MinigameInt);
+                Vector3 clickpos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+                RaycastHit2D hit = Physics2D.Raycast(clickpos, Vector2.zero, Mathf.Infinity, NpcCheck);
+                if (hit.collider != null && PlayerBool && hit.collider.gameObject.name == MiniName)
+                {
+                    if (ResourceReq <= Resource.Wheeeeeeeeet)
+                    {
+                        Resource.Wheeeeeeeeet -= ResourceReq;
+                        saveLocation.Save();
+                        Debug.Log(hit.collider.gameObject.name);
+                        SceneManager.LoadScene(MinigameInt);
+                    } else
+                    {
+                        SpeechBubble.SetActive(true);
+                    }
+                } 
+                
+            } else
+            {
+                Vector3 clickpos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+                RaycastHit2D hit = Physics2D.Raycast(clickpos, Vector2.zero, Mathf.Infinity, NpcCheck);
+                if (hit.collider != null && PlayerBool && hit.collider.gameObject.name == MiniName)
+                {
+                    saveLocation.Save();
+                    Debug.Log(hit.collider.gameObject.name);
+                    SceneManager.LoadScene(MinigameInt);
+                } 
             }
+            
         }
 
     }
+
 
     
 }

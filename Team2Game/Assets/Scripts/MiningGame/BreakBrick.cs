@@ -24,6 +24,7 @@ public class BreakBrick : MonoBehaviour
 
     void Start()
     {
+        Cursor.visible = true;
         health = UnityEngine.Random.Range(1f, 10f);
         totalHealth = health;
         percentageHealth = (health / totalHealth) * 100;

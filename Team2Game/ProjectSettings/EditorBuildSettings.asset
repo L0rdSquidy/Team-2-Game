@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WoodMiniGame.unity
     guid: f8503bc99d99dd642a440f2f52d7aa71
+  - enabled: 1
+    path: Assets/Scenes/SmithingMinigame.unity
+    guid: 6b8e5056cad46194d881320e1e5fef21
   m_configObjects: {}
