@@ -32,7 +32,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
 
    // TextMeshProUGUI timerTxt;
 
-   // TextMeshProUGUI playerList; // detta är inte PhotonNetwork.PlayerList, utan en lista som visas i spelet
+   // TextMeshProUGUI playerListk; // detta är inte PhotonNetwork.PlayerList, utan en lista som visas i spelet
 
     int playerAmount;
 

@@ -1,19 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Unity.Netcode;
 
 
-public class Resource : NetworkBehaviour
+public class Resource : MonoBehaviour
 {
     //this is the inventory and game manager. This script is shared between both players
 
     public static Resource Instance;
 
-    public NetworkList<int> amsPlayerInv = new NetworkList<int>();
-    public NetworkList<int> stockPlayerInv = new NetworkList<int>();
-    public NetworkList<int> amsShipInv = new NetworkList<int>();
-    public NetworkList<int> stockShipInv = new NetworkList<int>();
+    public List<int> amsPlayerInv = new List<int>();
+    public List<int> stockPlayerInv = new List<int>();
+    public List<int> amsShipInv = new List<int>();
+    public List<int> stockShipInv = new List<int>();
+  
 
     //public NetworkVariable<int[]> amsPlayerInv = new NetworkVariable<int[]>(); //amsterdam
     //public NetworkVariable<int[]> amsShipInv = new NetworkVariable<int[]>(); //amsterdam
