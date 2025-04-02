@@ -17,7 +17,7 @@ public class createTarget : MonoBehaviour
     void Update()
     {
         Vector3 mousPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKey(KeyCode.Mouse0))
         {
             targetrenderer.enabled = true;
             Cursor.visible = false;

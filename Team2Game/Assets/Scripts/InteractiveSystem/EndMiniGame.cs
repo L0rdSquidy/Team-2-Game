@@ -5,8 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class EndMiniGame : MonoBehaviour
 {
+    [SerializeField] int minigameInt;
     public void Return()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(minigameInt);
     }
 }
