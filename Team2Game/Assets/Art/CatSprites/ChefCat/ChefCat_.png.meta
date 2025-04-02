@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 80827df3994c7cc4dbcb5ab71521ac8d
+guid: 3fb7e678a7cfbd14d81836cad9cf4f48
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -97,175 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SmithingCat__0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 3000
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c768bbbbc1dc57f49be763cef461c8f4
-      internalID: 1336273242
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SmithingCat__1
-      rect:
-        serializedVersion: 2
-        x: 1000
-        y: 3000
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ae3273ff6ce781f45851360d0b34ca60
-      internalID: 173351725
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SmithingCat__2
-      rect:
-        serializedVersion: 2
-        x: 2000
-        y: 3000
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4ba8e7e50a768e04fbdaf1f8fa00b8f2
-      internalID: 99853472
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SmithingCat__3
-      rect:
-        serializedVersion: 2
-        x: 3000
-        y: 3000
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ffa4bd4e55be44641a036cc1438ec475
-      internalID: 1480776375
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SmithingCat__4
-      rect:
-        serializedVersion: 2
-        x: 4000
-        y: 3000
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d90d0ebf877764141a563ecd359e5159
-      internalID: -921850513
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SmithingCat__5
-      rect:
-        serializedVersion: 2
-        x: 5000
-        y: 3000
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0f2b7aba2d9f68f4aaa40fe07787e8f2
-      internalID: 1769234919
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SmithingCat__6
-      rect:
-        serializedVersion: 2
-        x: 6000
-        y: 3000
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eca023ba59bac36478f2a89098a65215
-      internalID: 378545417
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SmithingCat__7
-      rect:
-        serializedVersion: 2
-        x: 7000
-        y: 3000
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ed479c6e0a3ccf54ba651e6bb8db6fa4
-      internalID: 1549904202
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SmithingCat__8
+      name: ChefCat__0
       rect:
         serializedVersion: 2
         x: 0
@@ -279,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef6138733acafed448d47e5beaac419a
-      internalID: -420228113
+      spriteID: ec6e63ac7284af84ea1b881fc01241b2
+      internalID: 1301271323
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmithingCat__9
+      name: ChefCat__1
       rect:
         serializedVersion: 2
         x: 1000
@@ -300,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce8500be151666c45acff52ee1b91358
-      internalID: 1148248802
+      spriteID: 12918753644a02941a6501e7b75a1d78
+      internalID: 891156109
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmithingCat__10
+      name: ChefCat__2
       rect:
         serializedVersion: 2
         x: 2000
@@ -321,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6fe1ec9cdbf4bc94d8417f1204f4e66a
-      internalID: 433373090
+      spriteID: 1e10e02cacc613c429cd23ad1c27ac9e
+      internalID: -671980396
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmithingCat__11
+      name: ChefCat__3
       rect:
         serializedVersion: 2
         x: 3000
@@ -342,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e373ab863ede9574fba6e8019cbffb8e
-      internalID: 1495026415
+      spriteID: 13d6b4623a4922f4189cf1072769d517
+      internalID: -1032933271
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmithingCat__12
+      name: ChefCat__4
       rect:
         serializedVersion: 2
         x: 4000
@@ -363,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4531e04aa42ccb4685f996509e9221b
-      internalID: 1442448776
+      spriteID: 7b4eb8624441f3e46911a370dab0b57b
+      internalID: 1747150716
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmithingCat__13
+      name: ChefCat__5
       rect:
         serializedVersion: 2
         x: 5000
@@ -384,14 +216,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8a724005830b1d4eba83088df018a49
-      internalID: 1871045223
+      spriteID: b5d82f1d213acc64f86a074f08e9c3c0
+      internalID: 1268037358
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmithingCat__14
+      name: ChefCat__6
       rect:
         serializedVersion: 2
         x: 6000
@@ -405,14 +237,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ddd126cfc00e1e4d8e655d1fa1aadd2
-      internalID: 494442302
+      spriteID: 269667ab55831e64eb53697da7e231ca
+      internalID: -1922848061
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmithingCat__15
+      name: ChefCat__7
       rect:
         serializedVersion: 2
         x: 7000
@@ -426,14 +258,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35857536842ca6e4384008cdfe74b14a
-      internalID: 1405509343
+      spriteID: 9155c641d7f01ac4aaccc8cd92da4176
+      internalID: 1117303139
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmithingCat__16
+      name: ChefCat__8
       rect:
         serializedVersion: 2
         x: 0
@@ -447,14 +279,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02ca281dae2c28247ac7729ad1489349
-      internalID: 1579791804
+      spriteID: 65146512b736f9846a1d293e3596b68b
+      internalID: -727578936
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmithingCat__17
+      name: ChefCat__9
       rect:
         serializedVersion: 2
         x: 1000
@@ -468,14 +300,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 942b16d042a558a4f9f727ddef57bb0d
-      internalID: -1588432604
+      spriteID: 884aec840cdc461458ce041d4f3805e5
+      internalID: -1618336675
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmithingCat__18
+      name: ChefCat__10
       rect:
         serializedVersion: 2
         x: 2000
@@ -489,14 +321,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e74044afa13876428585b5e54d693cd
-      internalID: -409737539
+      spriteID: 25a0c87edca17524ca827573a629d48f
+      internalID: 747594049
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmithingCat__19
+      name: ChefCat__11
       rect:
         serializedVersion: 2
         x: 3000
@@ -510,14 +342,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b472e76eb82f324d9573b45f6ac9ec4
-      internalID: 828707317
+      spriteID: 7792ed940bf55a948a182fee079c5cb6
+      internalID: -1110734821
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmithingCat__20
+      name: ChefCat__12
       rect:
         serializedVersion: 2
         x: 4000
@@ -531,14 +363,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64e99fc1870b39a4e9dd048b623f3925
-      internalID: 1145941574
+      spriteID: 38fd89c6b4607664591d67b8d81ee0f1
+      internalID: 847412952
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmithingCat__21
+      name: ChefCat__13
       rect:
         serializedVersion: 2
         x: 5000
@@ -552,14 +384,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d566d11375e66674289a726029d8caa4
-      internalID: 1106484118
+      spriteID: 938f1b9973242284e9d69119d3a8d318
+      internalID: 192225561
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmithingCat__22
+      name: ChefCat__14
       rect:
         serializedVersion: 2
         x: 6000
@@ -573,14 +405,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f48d214beb483da4ca0d0314a303a5ca
-      internalID: 846192139
+      spriteID: 1c688c8660aa531418e3b0d3c474c6a7
+      internalID: -1998416070
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmithingCat__23
+      name: ChefCat__15
       rect:
         serializedVersion: 2
         x: 7000
@@ -594,14 +426,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20fa9f6c59ca733438470d5112ebddd5
-      internalID: -478221215
+      spriteID: 1677b45cdf640394ba02007815f7b391
+      internalID: -50165650
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmithingCat__24
+      name: ChefCat__16
       rect:
         serializedVersion: 2
         x: 0
@@ -615,14 +447,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fcfc82987d5c4b42ac5249906d6cf0a
-      internalID: -2004160490
+      spriteID: 2fea879ae1bbaa6489973e803e01ce35
+      internalID: -1453528369
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmithingCat__25
+      name: ChefCat__17
       rect:
         serializedVersion: 2
         x: 1000
@@ -636,14 +468,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28d800ab2dfc0e049a0b56817498159d
-      internalID: -923643702
+      spriteID: 52e2c99a832bb5e42ae6586a67192e06
+      internalID: -2049901939
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmithingCat__26
+      name: ChefCat__18
       rect:
         serializedVersion: 2
         x: 2000
@@ -657,14 +489,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52374ea144927ac458332022d945349c
-      internalID: 280919561
+      spriteID: 7ff7548184d65b945bdf757a5444b7cb
+      internalID: -2107531665
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmithingCat__27
+      name: ChefCat__19
       rect:
         serializedVersion: 2
         x: 3000
@@ -678,14 +510,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3fd279b030b0aab43bacbbfb43514afd
-      internalID: 590441919
+      spriteID: 1a3152f9aacf7de42a3fae4dcae3b391
+      internalID: 1054945801
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmithingCat__28
+      name: ChefCat__20
       rect:
         serializedVersion: 2
         x: 4000
@@ -699,14 +531,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f5bca97e5f427e4a874d11315edb9f8
-      internalID: 1192231497
+      spriteID: 6e7359ac25831ad4c941d5acc9960fd8
+      internalID: 631518348
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmithingCat__29
+      name: ChefCat__21
       rect:
         serializedVersion: 2
         x: 5000
@@ -720,14 +552,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 831669eaedf1d8d46ac9b4dce170ebce
-      internalID: 1207598038
+      spriteID: 3904e9e1f0b8b334488d8dac1ed3214e
+      internalID: 1209239181
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmithingCat__30
+      name: ChefCat__22
       rect:
         serializedVersion: 2
         x: 6000
@@ -741,20 +573,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70232e6f4a911344e9d1908d5bf49a3b
-      internalID: 555161276
+      spriteID: 6036580c94b6e8e499bca092a9388726
+      internalID: -213285952
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmithingCat__31
+      name: ChefCat__23
       rect:
         serializedVersion: 2
         x: 7000
         y: 0
-        width: 1000
-        height: 1000
+        width: 1
+        height: 1
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -762,8 +594,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 597d976766f3e0249ac00ea4c0a04e0e
-      internalID: -1369696330
+      spriteID: 33ba0acf4db1ebb419a441edbf42849e
+      internalID: -759981435
       vertices: []
       indices: 
       edges: []
@@ -779,38 +611,30 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SmithingCat__0: 1336273242
-      SmithingCat__1: 173351725
-      SmithingCat__10: 433373090
-      SmithingCat__11: 1495026415
-      SmithingCat__12: 1442448776
-      SmithingCat__13: 1871045223
-      SmithingCat__14: 494442302
-      SmithingCat__15: 1405509343
-      SmithingCat__16: 1579791804
-      SmithingCat__17: -1588432604
-      SmithingCat__18: -409737539
-      SmithingCat__19: 828707317
-      SmithingCat__2: 99853472
-      SmithingCat__20: 1145941574
-      SmithingCat__21: 1106484118
-      SmithingCat__22: 846192139
-      SmithingCat__23: -478221215
-      SmithingCat__24: -2004160490
-      SmithingCat__25: -923643702
-      SmithingCat__26: 280919561
-      SmithingCat__27: 590441919
-      SmithingCat__28: 1192231497
-      SmithingCat__29: 1207598038
-      SmithingCat__3: 1480776375
-      SmithingCat__30: 555161276
-      SmithingCat__31: -1369696330
-      SmithingCat__4: -921850513
-      SmithingCat__5: 1769234919
-      SmithingCat__6: 378545417
-      SmithingCat__7: 1549904202
-      SmithingCat__8: -420228113
-      SmithingCat__9: 1148248802
+      ChefCat__0: 1301271323
+      ChefCat__1: 891156109
+      ChefCat__10: 747594049
+      ChefCat__11: -1110734821
+      ChefCat__12: 847412952
+      ChefCat__13: 192225561
+      ChefCat__14: -1998416070
+      ChefCat__15: -50165650
+      ChefCat__16: -1453528369
+      ChefCat__17: -2049901939
+      ChefCat__18: -2107531665
+      ChefCat__19: 1054945801
+      ChefCat__2: -671980396
+      ChefCat__20: 631518348
+      ChefCat__21: 1209239181
+      ChefCat__22: -213285952
+      ChefCat__23: -759981435
+      ChefCat__3: -1032933271
+      ChefCat__4: 1747150716
+      ChefCat__5: 1268037358
+      ChefCat__6: -1922848061
+      ChefCat__7: 1117303139
+      ChefCat__8: -727578936
+      ChefCat__9: -1618336675
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
