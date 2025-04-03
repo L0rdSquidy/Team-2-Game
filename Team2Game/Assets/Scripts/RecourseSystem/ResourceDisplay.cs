@@ -13,10 +13,10 @@ public class ResourceDisplay : MonoBehaviour
     void Update()
     {
         // Update de UI-elementen met de actuele waarden
-        woodText.text = "Wood: " + ResourceManager.Instance.GetResourceAmount(ResourceManager.ResourceType.Wood);
-        wheatText.text = "Wheat: " + ResourceManager.Instance.GetResourceAmount(ResourceManager.ResourceType.Wheat);
-        breadText.text = "Bread: " + ResourceManager.Instance.GetResourceAmount(ResourceManager.ResourceType.Bread);
-        ironText.text = "Iron: " + ResourceManager.Instance.GetResourceAmount(ResourceManager.ResourceType.Iron);
-        swordText.text = "Sword: " + ResourceManager.Instance.GetResourceAmount(ResourceManager.ResourceType.Sword);
+        woodText.text = "" + ResourceManager.Instance.GetResourceAmount(ResourceManager.ResourceType.Wood);
+        wheatText.text = "" + ResourceManager.Instance.GetResourceAmount(ResourceManager.ResourceType.Wheat);
+        breadText.text = "" + ResourceManager.Instance.GetResourceAmount(ResourceManager.ResourceType.Bread);
+        ironText.text = "" + ResourceManager.Instance.GetResourceAmount(ResourceManager.ResourceType.Iron);
+        swordText.text = "" + ResourceManager.Instance.GetResourceAmount(ResourceManager.ResourceType.Sword);
     }
 }

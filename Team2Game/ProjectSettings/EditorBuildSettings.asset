@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SmithingMinigame.unity
     guid: 6b8e5056cad46194d881320e1e5fef21
+  - enabled: 1
+    path: Assets/Scenes/Start.unity
+    guid: 7f98a2ece06b2f044bbd6780249bbbef
+  - enabled: 1
+    path: Assets/Scenes/MultiplayerMenu.unity
+    guid: 3ee0c85fcc0f2dc499408a8d38136074
   m_configObjects: {}
