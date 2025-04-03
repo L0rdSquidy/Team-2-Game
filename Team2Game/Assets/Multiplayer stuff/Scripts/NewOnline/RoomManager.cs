@@ -17,10 +17,12 @@ public class RoomManager : MonoBehaviourPunCallbacks
 
     //Currently joining does not require any password but i would like to add that
 
+    int ResourceType; //0-4
+
     PhotonView view;
 
-    int AmsSceneNum = 5;
-    int StockSceneNum = 6;
+    int AmsSceneNum = 2;
+    int StockSceneNum = 1;
 
     //int sceneIndex = 1;
 

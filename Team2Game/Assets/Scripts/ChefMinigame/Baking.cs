@@ -35,7 +35,7 @@ public class Baking : MonoBehaviour
 				Debug.Log("he");
 			if (WaitScene <= 0)
 			{
-				SceneManager.LoadScene(1);
+				SceneManager.LoadScene(2);
 			}
 			
 			

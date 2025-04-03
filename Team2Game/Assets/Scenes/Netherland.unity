@@ -1226,7 +1226,7 @@ MonoBehaviour:
   NpcCheck:
     serializedVersion: 2
     m_Bits: 64
-  MinigameInt: 2
+  MinigameInt: 3
   MiniName: Chef
   NormalColor: {r: 1, g: 1, b: 1, a: 0}
   SelectedColor: {r: 1, g: 1, b: 1, a: 1}
@@ -3917,7 +3917,7 @@ MonoBehaviour:
   NpcCheck:
     serializedVersion: 2
     m_Bits: 64
-  MinigameInt: 5
+  MinigameInt: 6
   MiniName: Smith
   NormalColor: {r: 1, g: 1, b: 1, a: 0}
   SelectedColor: {r: 1, g: 1, b: 1, a: 1}

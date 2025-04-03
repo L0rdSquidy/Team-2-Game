@@ -9,6 +9,7 @@ TagManager:
   - Soil
   - Planted
   - Grown
+  - TradeText
   layers:
   - Default
   - TransparentFX

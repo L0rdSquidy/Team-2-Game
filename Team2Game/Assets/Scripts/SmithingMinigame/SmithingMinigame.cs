@@ -109,7 +109,7 @@ public class SmithingMinigame : MonoBehaviour
             }
             else
             {
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(2);
             }
 
             Debug.Log("smithing minigame score: " + smithingScore);

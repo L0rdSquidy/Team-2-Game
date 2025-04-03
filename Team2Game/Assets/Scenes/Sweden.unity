@@ -1707,7 +1707,7 @@ MonoBehaviour:
   NpcCheck:
     serializedVersion: 2
     m_Bits: 64
-  MinigameInt: 4
+  MinigameInt: 5
   MiniName: WoodCutting
   NormalColor: {r: 1, g: 1, b: 1, a: 0}
   SelectedColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1716,7 +1716,7 @@ MonoBehaviour:
   HasRecourceReq: 0
   ResourceReq: 0
   SpeechBubble: {fileID: 0}
-  Resource: {fileID: 0}
+  ischef: 0
 --- !u!50 &685461612
 Rigidbody2D:
   serializedVersion: 4
@@ -2608,7 +2608,7 @@ MonoBehaviour:
   NpcCheck:
     serializedVersion: 2
     m_Bits: 64
-  MinigameInt: 3
+  MinigameInt: 4
   MiniName: Mining
   NormalColor: {r: 1, g: 1, b: 1, a: 0}
   SelectedColor: {r: 1, g: 1, b: 1, a: 1}
@@ -2617,7 +2617,7 @@ MonoBehaviour:
   HasRecourceReq: 0
   ResourceReq: 0
   SpeechBubble: {fileID: 0}
-  Resource: {fileID: 0}
+  ischef: 0
 --- !u!114 &1223610767
 MonoBehaviour:
   m_ObjectHideFlags: 0

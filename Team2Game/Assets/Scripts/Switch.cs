@@ -7,10 +7,10 @@ public class Switch : MonoBehaviour
 {
     public void sweden()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(7);
     }
     public void nl()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(7);
     }
 }
