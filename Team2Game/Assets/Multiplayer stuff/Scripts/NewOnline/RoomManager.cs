@@ -8,210 +8,215 @@ using UnityEngine.SceneManagement;
 
 public class RoomManager : MonoBehaviourPunCallbacks
 {
-    //this is a code i made for an earlier game, but modified to work with this game
-    //and therefore some of the comments are in swedish
+	//this is a code i made for an earlier game, but modified to work with this game
+	//and therefore some of the comments are in swedish
 
-    //this code should manage the players joining the same game, or "room".
-    //The player who joins first will play Amsterdam and the second Stockholm.
+	//this code should manage the players joining the same game, or "room".
+	//The player who joins first will play Amsterdam and the second Stockholm.
 
 
-    //Currently joining does not require any password but i would like to add that
+	//Currently joining does not require any password but i would like to add that
 
-    int ResourceType; //0-4
+	int ResourceType; //0-4
 
-    PhotonView view;
+	PhotonView view;
 
-    int AmsSceneNum = 2;
-    int StockSceneNum = 1;
+	int AmsSceneNum = 2;
+	int StockSceneNum = 1;
+	
 
-    //int sceneIndex = 1;
+	//int sceneIndex = 1;
 
-    bool hasJoinedRoom;
+	bool hasJoinedRoom;
+	private GameObject SceneObject;
+	private SceneHistory sceneHistory;
 
-    //bool timerActive;
+	//bool timerActive;
 
-    //float timer;
+	//float timer;
 
    // TextMeshProUGUI timerTxt;
 
-   // TextMeshProUGUI playerListk; // detta är inte PhotonNetwork.PlayerList, utan en lista som visas i spelet
+   // TextMeshProUGUI playerListk; // detta ï¿½r inte PhotonNetwork.PlayerList, utan en lista som visas i spelet
 
-    int playerAmount;
+	int playerAmount;
 
-    //Player[] players;
+	//Player[] players;
 
    // const byte timerEventCode =  1;
 
-    public override void OnEnable()
-    {
-        base.OnEnable();
+	public override void OnEnable()
+	{
+		base.OnEnable();
 
-        PhotonNetwork.AddCallbackTarget(this);
+		PhotonNetwork.AddCallbackTarget(this);
 
-        
-    }
+		
+	}
 
-    public override void OnDisable()
-    {
-        PhotonNetwork.RemoveCallbackTarget(this);
+	public override void OnDisable()
+	{
+		PhotonNetwork.RemoveCallbackTarget(this);
 
-        base.OnDisable();
-    }
+		base.OnDisable();
+	}
 
-    public override void OnJoinedRoom()
-    {
-        /*
-        //följande kod tar vilken bil man valde och sparar värdet
-        var hash = PhotonNetwork.LocalPlayer.CustomProperties;
+	public override void OnJoinedRoom()
+	{
+		/*
+		//fï¿½ljande kod tar vilken bil man valde och sparar vï¿½rdet
+		var hash = PhotonNetwork.LocalPlayer.CustomProperties;
 
-        hash.Add("carNum", GetComponent<ServerManager>().carNum);
+		hash.Add("carNum", GetComponent<ServerManager>().carNum);
 
-        PhotonNetwork.LocalPlayer.SetCustomProperties(hash);
+		PhotonNetwork.LocalPlayer.SetCustomProperties(hash);
 
-       //     print("starting lobby");
+	   //     print("starting lobby");
 
-        */
+		*/
 
-        view = GetComponent<PhotonView>();
-        
-        /*
-        if (PhotonNetwork.NickName == "")
-        {
+		view = GetComponent<PhotonView>();
+		
+		/*
+		if (PhotonNetwork.NickName == "")
+		{
 
-            PhotonNetwork.NickName = "Player" + PhotonNetwork.LocalPlayer.ActorNumber;
+			PhotonNetwork.NickName = "Player" + PhotonNetwork.LocalPlayer.ActorNumber;
 
-        }*/
-
-
-        //playerList = GameObject.Find("PlayerList").GetComponent<TextMeshProUGUI>();
-
-        UpdatePlayerList();
-
-        GetComponent<ServerManager>().loadingTxt.SetActive(false);
-
-            hasJoinedRoom = true;
-        
-    }
-    public override void OnPlayerEnteredRoom(Player other)
-    {
-       
-
-        UpdatePlayerList();
-
-    }
-
-    public override void OnPlayerLeftRoom(Player otherPlayer)
-    {
-        UpdatePlayerList();
-
-        base.OnPlayerLeftRoom(otherPlayer); //osäker på om detta behövs
-    }
-
-    private void UpdatePlayerList()
-    {
-        CheckPlayerAmount();
+		}*/
 
 
-        /*for(int i = PhotonNetwork.PlayerList.Length - 1; i >= 0; i--)
-        {
-            if(PhotonNetwork.PlayerList[i] != null) 
-            {
-                players[i] = PhotonNetwork.PlayerList[i];
-            }
-        }*/
+		//playerList = GameObject.Find("PlayerList").GetComponent<TextMeshProUGUI>();
 
-        /*string playerNames = "";
-        foreach (Player player in PhotonNetwork.PlayerList)
-        {
-            if (player.NickName == "") //om man inte skriver in nickname får man ett med sitt nummer i
-            {
+		UpdatePlayerList();
 
-                player.NickName = "Player" + player.ActorNumber;
+		// GetComponent<ServerManager>().loadingTxt.SetActive(false);
 
-            }
+			hasJoinedRoom = true;
+		
+	}
+	public override void OnPlayerEnteredRoom(Player other)
+	{
+	   
 
-           // print("playerList");
-            playerNames += BoldMyName(player.NickName) + "\n";
-        }
-        playerList.text = "Players:\n" + playerNames;
-        */
+		UpdatePlayerList();
 
-    }
+	}
 
-    /*public string BoldMyName(string name)
-    {
-        if (name == PhotonNetwork.NickName)
-        {
-            return "<b>" + name + "</b>";
-        }
-        return name;
-    }*/
+	public override void OnPlayerLeftRoom(Player otherPlayer)
+	{
+		UpdatePlayerList();
 
-    public void CheckPlayerAmount() 
-    {
+		base.OnPlayerLeftRoom(otherPlayer); //osï¿½ker pï¿½ om detta behï¿½vs
+	}
 
-        playerAmount = PhotonNetwork.PlayerList.Length;
-    
-    }
-    
-    private void Update() //after two players have joined the game starts
-    {
-        if (PhotonNetwork.IsMasterClient && hasJoinedRoom && playerAmount >= 2) 
-        {
-            //StartTimer(10);
-
-            view.RPC("StartGame", RpcTarget.All);
-        }
-        
-        /*if (timerActive && playerAmount >= 2) 
-        {
-            timer -= Time.deltaTime;
-            timerTxt.text = "Starting in " + timer.ToString("0.00"); //+ " seconds"
-        }
-        if (PhotonNetwork.IsMasterClient && timerActive && timer <= 0)
-        {
-            StartGame();
-
-        }*/
-    }
+	private void UpdatePlayerList()
+	{
+		CheckPlayerAmount();
 
 
-    [PunRPC]
-    public void StartGame()
-    {
+		/*for(int i = PhotonNetwork.PlayerList.Length - 1; i >= 0; i--)
+		{
+			if(PhotonNetwork.PlayerList[i] != null) 
+			{
+				players[i] = PhotonNetwork.PlayerList[i];
+			}
+		}*/
 
-        if(PhotonNetwork.LocalPlayer.ActorNumber <= 1) 
-        {
-            SceneManager.LoadScene(AmsSceneNum);
-        }
-        else 
-        {
-            SceneManager.LoadScene(StockSceneNum);
-        }
-        //timer = waitTime; //hur lång tid tills start
-        //timerTxt = GameObject.Find("TimerTxt").GetComponent<TextMeshProUGUI>();
-        //timerActive = true;
+		/*string playerNames = "";
+		foreach (Player player in PhotonNetwork.PlayerList)
+		{
+			if (player.NickName == "") //om man inte skriver in nickname fï¿½r man ett med sitt nummer i
+			{
 
-        //PhotonNetwork.Instantiate en timer
-        
-    }
+				player.NickName = "Player" + player.ActorNumber;
+
+			}
+
+		   // print("playerList");
+			playerNames += BoldMyName(player.NickName) + "\n";
+		}
+		playerList.text = "Players:\n" + playerNames;
+		*/
+
+	}
+
+	/*public string BoldMyName(string name)
+	{
+		if (name == PhotonNetwork.NickName)
+		{
+			return "<b>" + name + "</b>";
+		}
+		return name;
+	}*/
+
+	public void CheckPlayerAmount() 
+	{
+
+		playerAmount = PhotonNetwork.PlayerList.Length;
+	
+	}
+	
+	private void Update() //after two players have joined the game starts
+	{
+		if (PhotonNetwork.IsMasterClient && hasJoinedRoom && playerAmount >= 2) 
+		{
+			//StartTimer(10);
+
+			view.RPC("StartGame", RpcTarget.All);
+		}
+		
+		/*if (timerActive && playerAmount >= 2) 
+		{
+			timer -= Time.deltaTime;
+			timerTxt.text = "Starting in " + timer.ToString("0.00"); //+ " seconds"
+		}
+		if (PhotonNetwork.IsMasterClient && timerActive && timer <= 0)
+		{
+			StartGame();
+
+		}*/
+	}
+
+
+	[PunRPC]
+	public void StartGame()
+	{
+		SceneObject = GameObject.FindGameObjectWithTag("SceneHistory");
+		sceneHistory = SceneObject.GetComponent<SceneHistory>();
+
+		if(PhotonNetwork.LocalPlayer.ActorNumber <= 1) 
+		{
+			sceneHistory.LoadScene("Netherland");
+		}
+		else 
+		{
+			sceneHistory.LoadScene("Sweden");
+		}
+		//timer = waitTime; //hur lï¿½ng tid tills start
+		//timerTxt = GameObject.Find("TimerTxt").GetComponent<TextMeshProUGUI>();
+		//timerActive = true;
+
+		//PhotonNetwork.Instantiate en timer
+		
+	}
 
  
-    
-    
-   /* public void StartGame() //körs bara hos master 
-    {
-        PhotonNetwork.CurrentRoom.IsOpen = false; //gör så att ingen mer kan gå med efter start
-        timerActive = false;
+	
+	
+   /* public void StartGame() //kï¿½rs bara hos master 
+	{
+		PhotonNetwork.CurrentRoom.IsOpen = false; //gï¿½r sï¿½ att ingen mer kan gï¿½ med efter start
+		timerActive = false;
 
-        
-        //PhotonNetwork.LoadLevel(sceneIndex);
-        //RaiseEventOptions eventOptions = 
+		
+		//PhotonNetwork.LoadLevel(sceneIndex);
+		//RaiseEventOptions eventOptions = 
 
 
-        //PhotonNetwork.RaiseEvent(timerEvent, );
+		//PhotonNetwork.RaiseEvent(timerEvent, );
 
-    }
+	}
 
-    */
+	*/
 }

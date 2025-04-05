@@ -2,27 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Switch : MonoBehaviour
-{
-	public void sweden()
-	{
-		SceneManager.LoadScene(7);
-	}
-	public void nl()
-	{
-		SceneManager.LoadScene(7);
-	}
-	
-	public void BacktoScene(bool ISnl)
-	
-	{
-		if (ISnl)
+{ 
+	public Button button;
+	private GameObject SceneObject;
+	private SceneHistory sceneHistory;
+
+	void Start()
+	{	
+		SceneObject = GameObject.FindGameObjectWithTag("SceneHistory");
+		sceneHistory = SceneObject.GetComponent<SceneHistory>();
+		if (button!=null)
 		{
-			SceneManager.LoadScene(2);
-		} else
-		{
-			SceneManager.LoadScene(1);
+			button.onClick.AddListener(sceneHistory.PreviousScene);
 		}
+
+	}
+
+
+	public void TradingSwitch()
+	
+	{
+		sceneHistory.LoadScene("Trading");
 	}
 }

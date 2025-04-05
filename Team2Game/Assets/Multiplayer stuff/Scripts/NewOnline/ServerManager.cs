@@ -11,7 +11,7 @@ public class ServerManager : MonoBehaviourPunCallbacks
 
     GameObject nameInput;
 
-    public GameObject loadingTxt;
+    // public GameObject loadingTxt;
 
    // Slider carSlider;
 
@@ -25,7 +25,7 @@ public class ServerManager : MonoBehaviourPunCallbacks
 
         
 
-        (loadingTxt = GameObject.Find("Loading")).SetActive(false);
+        // (loadingTxt = GameObject.Find("Loading")).SetActive(false);
 
         //nameInput = GameObject.Find("PlayerNickName");
 
@@ -53,11 +53,11 @@ public class ServerManager : MonoBehaviourPunCallbacks
         PhotonNetwork.ConnectUsingSettings();
         print("Connecting...");
 
-        GameObject.Find("ConnectButton").SetActive(false);
+        // GameObject.Find("ConnectButton").SetActive(false);
 
     }
 
-    public override void OnConnectedToMaster() //när man har connectat så skickas man till ett rum. Efter man kommit in i ett rum sätts vänt-lobbyn på, där man kan se spelarlistan och tiden till start
+    public override void OnConnectedToMaster() //nï¿½r man har connectat sï¿½ skickas man till ett rum. Efter man kommit in i ett rum sï¿½tts vï¿½nt-lobbyn pï¿½, dï¿½r man kan se spelarlistan och tiden till start
     {
         //connectButton.SetActive(true);
 
@@ -65,7 +65,7 @@ public class ServerManager : MonoBehaviourPunCallbacks
         PhotonNetwork.AutomaticallySyncScene = false;
         GetComponent<LobbyManager>().JoinRoom();
         //Destroy(GameObject.Find("DestroyOnceConnected"));
-        loadingTxt.SetActive(true);
+        // loadingTxt.SetActive(true);
 
     }
 }

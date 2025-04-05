@@ -10,6 +10,7 @@ TagManager:
   - Planted
   - Grown
   - TradeText
+  - SceneHistory
   layers:
   - Default
   - TransparentFX

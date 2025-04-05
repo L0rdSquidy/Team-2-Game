@@ -5629,6 +5629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc22e35368e076a49a9dcd5d65343d7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  button: {fileID: 0}
 --- !u!114 &1705561068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5669,13 +5670,13 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 1705561069}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1705561067}
         m_TargetAssemblyTypeName: Switch, Assembly-CSharp
-        m_MethodName: sweden
+        m_MethodName: TradingSwitch
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
