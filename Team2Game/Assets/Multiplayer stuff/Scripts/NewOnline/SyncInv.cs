@@ -22,6 +22,8 @@ public class SyncInv : MonoBehaviourPunCallbacks
 
 
 
+
+
 	public override void OnEnable()
 	{
 		//Debug.Log("OnEnable called");
@@ -30,14 +32,51 @@ public class SyncInv : MonoBehaviourPunCallbacks
 
 	void OnSceneLoaded(Scene scene, LoadSceneMode mode)
 	{
-		//Debug.Log("OnSceneLoaded: " + scene.name);
-		//Debug.Log(mode);
+		
 		if(scene.buildIndex == 7) 
 		{
 			texts = GameObject.FindGameObjectsWithTag("TradeText");
-			
 			Cursor.visible = true;
 			inTradingScene = true;
+			foreach(GameObject text in texts) 
+			{
+				for (int i = 0; i < 9; i++)
+				{
+					if(text.name == "InvText" + i) 
+				{
+					
+					string amount = "";
+					switch (i)
+					{
+						case 0:
+							amount = ResourceManager.Instance.GetResourceAmount(ResourceManager.ResourceType.Wood).ToString();
+							break;
+						case 1:
+							amount = ResourceManager.Instance.GetResourceAmount(ResourceManager.ResourceType.Sword).ToString();
+							break;
+						case 2:
+							amount = ResourceManager.Instance.GetResourceAmount(ResourceManager.ResourceType.Iron).ToString();
+							break;
+						case 3:
+							amount = ResourceManager.Instance.GetResourceAmount(ResourceManager.ResourceType.Bread).ToString();
+							break;
+						case 4:
+							amount  = ResourceManager.Instance.GetResourceAmount(ResourceManager.ResourceType.Wheat).ToString();
+							break;
+					}
+					text.GetComponent<TextMeshProUGUI>().text = amount;
+				}
+				}
+				
+				for (int i = 0; i < 9; i++)
+				{
+					if (text.name == "ShipText" + i)
+					{
+						text.GetComponent<TextMeshProUGUI>().text = resources[i].ToString();
+					}
+				}
+				
+			}
 		}
 		else 
 		{
@@ -67,7 +106,9 @@ public class SyncInv : MonoBehaviourPunCallbacks
 
 		if (plus && type == 0) 
 		{
-			ResourceManager.Instance.RemoveResource(ResourceManager.ResourceType.Wood, 1);
+			if (ResourceManager.Instance.GetResourceAmount(ResourceManager.ResourceType.Wood) != 0)
+			{
+				ResourceManager.Instance.RemoveResource(ResourceManager.ResourceType.Wood, 1);
 
 			foreach(GameObject text in texts) 
 			{
@@ -79,10 +120,14 @@ public class SyncInv : MonoBehaviourPunCallbacks
 			}
 
 			view.RPC("SyncPlus", RpcTarget.All, type);
+			}
+			
 		}
 		if (plus && type == 1)
 		{
-			ResourceManager.Instance.RemoveResource(ResourceManager.ResourceType.Wheat, 1);
+			if (ResourceManager.Instance.GetResourceAmount(ResourceManager.ResourceType.Wood) != 0)
+			{
+				ResourceManager.Instance.RemoveResource(ResourceManager.ResourceType.Wheat, 1);
 
 			foreach (GameObject text in texts)
 			{
@@ -94,10 +139,14 @@ public class SyncInv : MonoBehaviourPunCallbacks
 			}
 
 			view.RPC("SyncPlus", RpcTarget.All, type);
+			}
+			
 		}
 		if (plus && type == 2)
 		{
-			ResourceManager.Instance.RemoveResource(ResourceManager.ResourceType.Bread, 1);
+			if (ResourceManager.Instance.GetResourceAmount(ResourceManager.ResourceType.Wood) != 0)
+			{
+				ResourceManager.Instance.RemoveResource(ResourceManager.ResourceType.Bread, 1);
 			foreach (GameObject text in texts)
 			{
 				if (text.name == "InvText" + type)
@@ -108,10 +157,14 @@ public class SyncInv : MonoBehaviourPunCallbacks
 			}
 
 			view.RPC("SyncPlus", RpcTarget.All, type);
+			}
+			
 		}
 		if (plus && type == 3)
 		{
-			ResourceManager.Instance.RemoveResource(ResourceManager.ResourceType.Iron, 1);
+			if (ResourceManager.Instance.GetResourceAmount(ResourceManager.ResourceType.Wood) != 0)
+			{
+				ResourceManager.Instance.RemoveResource(ResourceManager.ResourceType.Iron, 1);
 			foreach (GameObject text in texts)
 			{
 				if (text.name == "InvText" + type)
@@ -122,9 +175,13 @@ public class SyncInv : MonoBehaviourPunCallbacks
 			}
 			view.RPC("SyncPlus", RpcTarget.All, type);
 		}
+			}
+			
 		if (plus && type == 4)
 		{
-			ResourceManager.Instance.RemoveResource(ResourceManager.ResourceType.Sword, 1);
+			if (ResourceManager.Instance.GetResourceAmount(ResourceManager.ResourceType.Wood) != 0)
+			{
+				ResourceManager.Instance.RemoveResource(ResourceManager.ResourceType.Sword, 1);
 			foreach (GameObject text in texts)
 			{
 				if (text.name == "InvText" + type)
@@ -134,6 +191,8 @@ public class SyncInv : MonoBehaviourPunCallbacks
 				}
 			}
 			view.RPC("SyncPlus", RpcTarget.All, type);
+			}
+			
 		}
 		if (!plus && type == 0)
 		{
